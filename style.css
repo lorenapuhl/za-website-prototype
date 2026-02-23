@@ -69,7 +69,7 @@ h1 {                             /* Styles for the main heading */
   font-family: 'Tenor Sans', sans-serif; /* Uses Tenor Sans, falls back to sans-serif */
   font-weight: 400;               /* Tenor Sans typically uses a regular weight for this look */
   letter-spacing: 0.2em;          /* Adds wide spacing to match the 'Z A N N A' style */
-  font-size: 80px;                /* Sets font size to 72 pixels */
+  font-size: 120px;                /* Sets font size to 72 pixels */
   color: var(--header-color); 
 }
 
@@ -188,7 +188,7 @@ footer {                          /* Styles for the footer section */
   border-top: 1px solid #eaeaea;
   padding: 15px 20px;
   z-index: 1000; /* Keeps it above the IG feed */
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
 }
 
 .banner-content {
@@ -204,8 +204,6 @@ footer {                          /* Styles for the footer section */
   font-size: 0.95rem;
   font-weight: 500;
   color: #333;
-    /* 0px offset-x, -4px offset-y (to push shadow UP), 15px blur */
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cta-container {
