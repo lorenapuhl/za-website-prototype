@@ -349,6 +349,25 @@ footer {                          /* Styles for the footer section */
   text-align: left;               /* Left-aligns the link text */
 }
 
+.close-button {
+    background: transparent; /* Removes any default gray background */
+    border: none;            /* Removes the solid frame around the X */
+    outline: none;           /* Removes the box that appears when clicked */
+    box-shadow: none;        /* Ensures no shadow is creating a 'frame' effect */
+    cursor: pointer;        /* Ensures the user knows it's clickable */
+    padding: 10px;           /* Gives the user a larger area to tap on mobile */
+    font-size: 24px;         /* Adjust the size of the X to your liking */
+    color: var(--text-color); /* Matches your branding */
+}
+
+/* Force-remove the border even when the button is active or focused */
+.close-button:focus,
+.close-button:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 /* ========================================
    RESPONSIVE DESIGN - MEDIA QUERIES
    ======================================== */
