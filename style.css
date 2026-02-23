@@ -210,6 +210,8 @@ footer {                          /* Styles for the footer section */
   display: flex;
   align-items: center;
   gap: 20px;
+  /* 0px offset-x, -4px offset-y (to push shadow UP), 15px blur */
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .icon-link {
@@ -235,8 +237,6 @@ footer {                          /* Styles for the footer section */
   font-weight: 600;
   font-size: 0.85rem;
   text-transform: uppercase;
-  /* 0px offset-x, -4px offset-y (to push shadow UP), 15px blur */
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Mobile Responsiveness */
