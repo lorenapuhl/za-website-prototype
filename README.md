@@ -29,4 +29,4 @@ website-prototype/
 
 ## Live Demo
 
-Visit the live site: [https://lorenapuhl.github.io/blackstudio-website-prototype/](https://lorenapuhl.github.io/sanbagel-website-prototype/)
+Visit the live site: [https://lorenapuhl.github.io/zanna-website-prototype/](https://lorenapuhl.github.io/zanna-website-prototype/)
