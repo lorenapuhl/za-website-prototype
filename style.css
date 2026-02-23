@@ -96,11 +96,6 @@ body {
   text-align: center;             /* Centers all text content by default */
 }
 
-/* BRAND COLOURS
- * styling of body section
- */
-
-
 /* NAVIGATION STYLE
  * Selects <ul> elements that are inside <nav> elements
  * list-style: none; -     Removes bullet points from lists
@@ -155,6 +150,99 @@ p {                               /* Styles for paragraph elements */
 footer {                          /* Styles for the footer section */
   padding: 40px 20px;             /* Adds 40px padding top/bottom, 20px left/right */
   border-top: 1px solid #333;     /* Adds a 1px solid dark gray line at the top */
+}
+
+.fine-line {
+  border: 0;
+  height: 1px;
+  background: var(--font-color); /* Use a soft grey or your brand color */
+  width: 200px;       /* Keeps it "minimalist" and centered */
+  margin: 10px auto; /* Adjusts spacing above/below and centers it */
+}
+
+.testimonials {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+/* ========================================
+   FLOATING BANNER
+   ======================================== */
+
+.floating-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Modern frosted glass look */
+  border-top: 1px solid #eaeaea;
+  padding: 15px 20px;
+  z-index: 1000; /* Keeps it above the IG feed */
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-link {
+  font-size: 1.5rem;
+  color: #25D366; /* WhatsApp Green */
+  transition: opacity 0.3s;
+}
+
+.icon-link:nth-child(2) {
+  color: #E1306C; /* Instagram Pink/Red */
+}
+
+.icon-link:hover {
+  opacity: 0.7;
+}
+
+.cta-button {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px; /* Pill shape for a modern look */
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 
 /* ========================================
