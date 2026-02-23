@@ -47,15 +47,16 @@
   
   /* Background colour */
   --background-color: rgba(253, 230, 227, 1);  
-
   /* font colour */
   --font-color: rgba(174, 131, 126, 1);           
-
   /* hover colour */
-  --hover-color: rgba(85, 78, 72, 1); 
-
+  --hover-color: rgba(85, 78, 72, 1);
   /* header colour */
   --header-color: rgba(85, 78, 72, 1); 
+  /* banner colour */
+  --banner-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  /* banner font colour */
+  --banner-font: rgba(85, 78, 72, 1); 
 }
   
  /* ========================================
@@ -190,7 +191,7 @@ footer {                          /* Styles for the footer section */
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background: var(--banner-color);
   backdrop-filter: blur(10px); /* Modern frosted glass look */
   border-top: 1px solid #eaeaea;
   padding: 15px 20px;
@@ -210,7 +211,7 @@ footer {                          /* Styles for the footer section */
   margin: 0;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #333;
+  color: var(--banner-font);
 }
 
 .cta-container {
