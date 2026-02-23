@@ -322,7 +322,7 @@ footer {                          /* Styles for the footer section */
   margin: 20px 0 15px 0;          /* Adds 20px top, 15px bottom margin (0 left/right) */
   text-transform: uppercase;      /* Transforms text to ALL CAPS */
   letter-spacing: 2px;            /* Adds 2px space between letters */
-  border-bottom: 2px solid #333;  /* Adds 2px solid dark gray line below heading */
+  border-bottom: 2px solid var(--background-color);  /* Adds 2px solid dark gray line below heading */
   padding-bottom: 8px;            /* Adds 8px padding below text before border */
   text-align: left;               /* Left-aligns the heading text */
 }
@@ -437,6 +437,7 @@ footer {                          /* Styles for the footer section */
     display: flex !important;  /* Makes hamburger button visible on mobile */
     border: none; /* Removes the default border */
     outline: none;       /* Removes the blue/black focus ring */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
   }
 }
 
