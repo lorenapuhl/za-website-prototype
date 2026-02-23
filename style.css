@@ -1,0 +1,364 @@
+/* style.css - Blackstudio Official Styles */
+
+/* ========================================
+   BASIC FORMATTING
+   ======================================== */
+
+/* RESET DEFAULT STYLE
+ * Universal selector * -> selects ALL elements on page
+ * margin: spacing between <div> boxes [Box 1]    ← 20px space →    [Box 2]
+   ↑                          ↑
+   └── Extra space around each box
+ * padding: Space inside an element between content and its border ┌─────────────────────┐
+│                     │ ← 20px padding
+│    Text content     │
+│                     │
+└─────────────────────┘
+  ↑ Border
+  
+ * box-sizing: border-box --> Changes how total width/height is calculated to include padding and border, width/height includes padding and border
+ 
+  ┌─────────────────────────────────┐
+  │         MARGIN (outside)        │
+  │  ┌───────────────────────────┐  │
+  │  │         BORDER            │  │
+  │  │  ┌─────────────────────┐  │  │
+  │  │  │      PADDING        │  │  │
+  │  │  │  ┌───────────────┐  │  │  │
+  │  │  │  │   CONTENT     │  │  │  │
+  │  │  │  │   (text)      │  │  │  │
+  │  │  │  └───────────────┘  │  │  │
+  │  │  │                     │  │  │
+  │  │  └─────────────────────┘  │  │
+  │  │                           │  │
+  │  └───────────────────────────┘  │
+  │                                 │
+  └─────────────────────────────────┘
+
+
+ */
+ 
+/* ========================================
+ MAIN VARIABLES
+ ======================================== */
+   
+:root {
+  /* Defining the variables using the tones from your images */
+  
+  /* Background colour */
+  --background-color: rgba(253, 230, 227, 1);  
+
+  /* font colour */
+  --font-color: rgba(174, 131, 126, 1);           
+
+  /* hover colour */
+  --hover-color: rgba(85, 78, 72, 1); 
+
+  /* header colour */
+  --header-color: rgba(85, 78, 72, 1); 
+}
+  
+ /* ========================================
+ FONTS
+ ======================================== */
+
+/* MAIN TITLE <h1> tag*/
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); /* Imports Tenor Sans from Google Fonts */
+
+h1 {                             /* Styles for the main heading */
+  font-family: 'Tenor Sans', sans-serif; /* Uses Tenor Sans, falls back to sans-serif */
+  font-weight: 400;               /* Tenor Sans typically uses a regular weight for this look */
+  letter-spacing: 0.2em;          /* Adds wide spacing to match the 'Z A N N A' style */
+  font-size: 72px;                /* Sets font size to 72 pixels */
+  color: var(--header-color); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Imports Montserrat from Google Fonts */
+
+body {
+  /* Styles for the main body element */
+  background-color: var(--background-color);    /* Sets entire page background to Light Brown */
+  color: var(--font-color);              /* Sets text to Dark Brown for readability */
+  font-family: 'Montserrat', sans-serif; /* Uses Montserrat font, falls back to any sans-serif */
+  text-align: center;             /* Centers all text in the body */
+}
+
+
+
+   /* ========================================
+   STYLES
+   ======================================== */
+
+* {                               /* Selects ALL elements on the page */
+  margin: 0;                      /* Removes default margin spacing from all elements */
+  padding: 0;                     /* Removes default padding spacing from all elements */
+  box-sizing: border-box;         /* Includes padding and border in element's total width/height */
+  text-align: center;             /* Centers all text content by default */
+}
+
+/* BRAND COLOURS
+ * styling of body section
+ */
+
+
+/* NAVIGATION STYLE
+ * Selects <ul> elements that are inside <nav> elements
+ * list-style: none; -     Removes bullet points from lists
+ * display: flex; - Makes items display horizontally
+ * gap: 20px; - Adds 20px space between flex items
+ * padding: 20px; - Adds 20px space inside the element (all sides)
+ */
+ 
+ nav {                            /* Styles for the navigation container */
+  display: flex;                  /* Uses flexbox layout for the nav */
+  justify-content: center;        /* Centers the ul inside the nav horizontally */
+}
+
+nav ul {                          /* Styles for unordered lists inside navigation */
+  list-style: none;               /* Removes bullet points from list items */
+  display: flex;                  /* Displays list items in a horizontal row */
+  gap: 20px;                      /* Adds 20px space between each list item */
+  padding: 20px;                  /* Adds 20px space inside the ul around all sides */
+}
+
+/* HREF STYLES <a> tags
+ * color: white; - Makes link text white
+ * text-decoration: none; - Removes default underline from links
+ * font-weight: bold; - Makes text bold
+ */
+
+nav a {                           /* Styles for anchor links inside navigation */
+  color:  var(--font-color);                   /* Sets link text color to white */
+  text-decoration: none;          /* Removes the default underline from links */
+  font-weight: bold;              /* Makes link text bold */
+}
+
+/* HOVER EFFECTS for 
+ * :hover is a pseudo-class (state-based selector) --> Applies styles when mouse hovers over the elementlinks 
+ * Changes to colour #ff0
+*/
+nav a:hover {                     /* Applies when mouse hovers over navigation links */
+  color: var(--hover-color);                    /* Changes link color to medium gray on hover */
+}
+
+/* PARAGRAPH STYLES <p>
+ */
+p {                               /* Styles for paragraph elements */
+  margin: 20px;                   /* Adds 20px margin around all sides of paragraphs */
+  color: var(--font-color);                       /* Sets paragraph text color to light gray */
+}
+
+/* FOOTER <footer> section
+ * 40px = top and bottom padding, 20px = left and right padding
+ * order-top-width: 1px; border-top-style: solid; border-top-color: #333; (dark gray)
+ */
+footer {                          /* Styles for the footer section */
+  padding: 40px 20px;             /* Adds 40px padding top/bottom, 20px left/right */
+  border-top: 1px solid #333;     /* Adds a 1px solid dark gray line at the top */
+}
+
+/* ========================================
+   SLIDE MENU BASE STYLES
+   ======================================== */
+
+/* Base styles for slide menu - these apply on ALL devices */
+.slide-menu {                     /* Styles for the sliding menu container */
+  position: fixed;                /* Positions menu relative to viewport (stays in place when scrolling) */
+  top: 0;                         /* Aligns menu to the top of the screen */
+  left: -300px;                   /* Positions menu 300px left of screen (hidden off-screen by default) */
+  width: 280px;                   /* Sets menu width to 280 pixels */
+  height: 100vh;                  /* Sets menu height to 100% of viewport height */
+  background-color: var(--font-color);        /* Sets menu background */
+  z-index: 1001;                  /* Places menu above most other elements (higher number = more forward) */
+  transition: left 0.3s ease;     /* Animates the left position change over 0.3 seconds */
+  padding: 70px 20px 30px 20px;   /* Adds 70px top, 20px left/right, 30px bottom padding */
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);  /* Adds shadow to right side: 2px right, 0 down, 15px blur, 50% opaque black */
+  overflow-y: auto;               /* Adds vertical scrollbar if content overflows */
+  text-align: left;               /* Left-aligns text in the menu */
+}
+
+.slide-menu.open {                /* Applied when menu has "open" class (via JavaScript) */
+  left: 0;                        /* Moves menu to 0 from left (slides it onto screen) */
+}
+
+/* Menu button base styles */
+.menu-button {                    /* Styles for the hamburger menu button */
+  position: fixed;                /* Positions button relative to viewport (stays in place) */
+  top: 20px;                      /* Places button 20px from top of screen */
+  left: 20px;                     /* Places button 20px from left of screen */
+  z-index: 1000;                  /* Places button above most elements (but below slide-menu) */
+  cursor: pointer;                /* Changes cursor to pointer/hand when hovering */
+  padding: 12px;                  /* Adds 12px padding inside button on all sides */
+  background-color: var(--font-color); ;  /* Sets background to black with 90% opacity */
+  border-radius: 5px;             /* Rounds the corners by 5 pixels */
+  flex-direction: column;         /* Stacks child elements (bars) vertically */
+  gap: 5px;                       /* Adds 5px space between each bar */
+  border: 1px solid #333;         /* Adds a 1px solid dark gray border */
+  display: none;                  /* Hidden by default (shown only on mobile) */
+}
+
+.menu-button .bar {               /* Styles for the three bars inside hamburger button */
+  width: 25px;                    /* Sets bar width to 25 pixels */
+  height: 3px;                    /* Sets bar height to 3 pixels */
+  background-color: white;        /* Sets bar color to white */
+  transition: all 0.3s ease;      /* Animates any changes to the bar over 0.3 seconds */
+}
+
+/* Overlay base styles */
+.overlay {                        /* Styles for the dark overlay when menu is open */
+  position: fixed;                /* Positions overlay relative to viewport */
+  top: 0;                         /* Starts overlay at top of screen */
+  left: 0;                        /* Starts overlay at left of screen */
+  width: 100%;                    /* Makes overlay full screen width */
+  height: 100%;                   /* Makes overlay full screen height */
+  background-color: rgba(var(--background-color-rgb), 0.8);
+  z-index: 999;                   /* Places overlay below menu (1001) but above other content */
+  display: none;                  /* Hidden by default */
+  backdrop-filter: blur(3px);     /* Adds 3px blur effect to content behind overlay */
+}
+
+.overlay.show {                   /* Applied when overlay has "show" class (via JavaScript) */
+  display: block;                 /* Makes overlay visible */
+}
+
+/* Menu content styles */
+.menu-content {                   /* Styles for the content container inside slide menu */
+  text-align: left;               /* Left-aligns all text in menu content */
+  color: var(--background-color);                   /* Sets text color to white */
+}
+
+.menu-content h3 {                /* Styles for h3 headings inside menu content */
+  color: var(--background-color);                   /* Sets heading text color to white */
+  font-size: 18px;                /* Sets font size to 18 pixels */
+  margin: 20px 0 15px 0;          /* Adds 20px top, 15px bottom margin (0 left/right) */
+  text-transform: uppercase;      /* Transforms text to ALL CAPS */
+  letter-spacing: 2px;            /* Adds 2px space between letters */
+  border-bottom: 2px solid #333;  /* Adds 2px solid dark gray line below heading */
+  padding-bottom: 8px;            /* Adds 8px padding below text before border */
+  text-align: left;               /* Left-aligns the heading text */
+}
+
+.menu-links {                     /* Styles for the menu links list */
+  list-style: none;               /* Removes bullet points from list */
+  margin: 0;                      /* Removes default margin */
+  padding: 0;                     /* Removes default padding */
+}
+
+.menu-links li {                  /* Styles for each list item in menu */
+  margin: 0;                      /* Removes default margin */
+  border-bottom: 1px solid #222;  /* Adds 1px solid very dark gray line below each item */
+}
+
+.menu-links a {                   /* Styles for anchor links inside menu */
+  display: block;                 /* Makes link a block element (takes full width) */
+  padding: 15px 0;                /* Adds 15px padding top and bottom (0 left/right) */
+  color: var(--background-color);                    /* Sets link color to light gray */
+  text-decoration: none;          /* Removes underline from links */
+  font-size: 16px;                /* Sets font size to 16 pixels */
+  letter-spacing: 1px;            /* Adds 1px space between letters */
+  transition: all 0.2s ease;      /* Animates any changes over 0.2 seconds */
+  text-align: left;               /* Left-aligns the link text */
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+
+/* Tablet Styles (screens smaller than 900px) */
+@media screen and (max-width: 900px) {  /* Applies only when screen width is 900px or less */
+  h1 {
+    font-size: 48px;  /* Smaller title for tablets */  /* Reduces h1 size from 72px to 48px */
+  }
+  
+  nav ul {
+    gap: 15px;  /* Reduce space between nav items */  /* Reduces gap from 20px to 15px */
+    padding: 15px;  /* Reduces padding from 20px to 15px */
+    flex-wrap: wrap;  /* Allow nav items to wrap if needed */  /* Items move to next line if no space */
+    justify-content: center;  /* Centers wrapped items */
+  }
+  
+  p {
+    font-size: 16px;  /* Reduces paragraph font size */
+    margin: 15px;  /* Reduces paragraph margin */
+  }
+}
+
+/* Mobile Styles (screens smaller than 600px) */
+@media screen and (max-width: 600px) {  /* Applies only when screen width is 600px or less */
+  h1 {
+    font-size: 36px;  /* Even smaller for mobile */  /* Further reduces h1 size to 36px */
+    letter-spacing: 2px;  /* Reduce letter spacing */  /* Reduces space between letters */
+    margin-top: 80px;  /* Adds margin above the h1 instead of padding */
+  }
+  
+  nav ul {
+    gap: 10px;  /* Further reduces gap to 10px */
+    padding: 10px;  /* Further reduces padding to 10px */
+    flex-direction: column;  /* Stack nav items vertically */  /* Changes from row to column layout */
+    align-items: center;  /* Centers items vertically in column */
+  }
+  
+  nav a {
+    display: block;  /* Make links full width for easier tapping */  /* Links take full width */
+    padding: 8px 0;  /* Adds vertical padding for easier tapping */
+    font-size: 16px;  /* Sets mobile link font size */
+  }
+  
+  p {
+    font-size: 14px;  /* Further reduces paragraph font size */
+    margin: 10px;  /* Further reduces paragraph margin */
+  }
+  
+  footer {
+    padding: 30px 15px;  /* Reduces footer padding */
+    font-size: 14px;  /* Reduces footer font size */
+  }
+  
+  address {
+    line-height: 1.6;  /* Sets line height for address text */
+    font-size: 14px;  /* Reduces address font size */
+  }
+  
+  /* Hide desktop header on mobile */
+  header {
+    display: none !important;  /* Hides the desktop header on mobile devices */
+  }
+  
+  /* Show hamburger button */
+  .menu-button {
+    display: flex !important;  /* Makes hamburger button visible on mobile */
+  }
+}
+
+/* Small Mobile Styles (screens smaller than 400px) */
+@media screen and (max-width: 400px) {  /* Applies only on very small screens */
+  h1 {
+    font-size: 28px;  /* Smallest size for very small phones */  /* Further reduces h1 to 28px */
+  }
+  
+  nav ul {
+    gap: 5px;  /* Minimum gap between nav items */
+  }
+}
+
+/* ========================================
+   DESKTOP STYLES (screens larger than 600px)
+   ======================================== */
+@media screen and (min-width: 601px) {  /* Applies only on screens wider than 600px (desktop/tablet) */
+  /* Hide ALL mobile menu elements on desktop */
+  .menu-button,
+  .slide-menu,
+  .overlay {
+    display: none !important;  /* Forces mobile menu elements to be hidden on desktop */
+  }
+  
+  /* Ensure desktop header is visible */
+  header {
+    display: block !important;  /* Forces desktop header to be visible */
+  }
+  
+  /* Make sure desktop navigation is visible */
+  nav ul {
+    display: flex !important;  /* Forces navigation to display as flex on desktop */
+  }
+}
