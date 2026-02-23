@@ -81,6 +81,7 @@ body {
   color: var(--font-color);              /* Sets text to Dark Brown for readability */
   font-family: 'Montserrat', sans-serif; /* Uses Montserrat font, falls back to any sans-serif */
   text-align: center;             /* Centers all text in the body */
+  padding-bottom: 120px;
 }
 
 
@@ -91,8 +92,8 @@ body {
 
 * {                               /* Selects ALL elements on the page */
   margin: 0;                      /* Removes default margin spacing from all elements */
-  padding: 0;                     /* Removes default padding spacing from all elements */
   box-sizing: border-box;         /* Includes padding and border in element's total width/height */
+  padding: 0;                     /* Removes default padding spacing from all elements */
   text-align: center;             /* Centers all text content by default */
 }
 
