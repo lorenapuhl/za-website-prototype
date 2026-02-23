@@ -235,6 +235,8 @@ footer {                          /* Styles for the footer section */
   font-weight: 600;
   font-size: 0.85rem;
   text-transform: uppercase;
+  /* 0px offset-x, -4px offset-y (to push shadow UP), 15px blur */
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Mobile Responsiveness */
@@ -437,7 +439,7 @@ footer {                          /* Styles for the footer section */
     display: flex !important;  /* Makes hamburger button visible on mobile */
     border: none; /* Removes the default border */
     outline: none;       /* Removes the blue/black focus ring */
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
   }
 }
 
