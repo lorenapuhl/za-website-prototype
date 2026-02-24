@@ -142,14 +142,46 @@ p {                               /* Styles for paragraph elements */
   margin: 10px auto; /* Adjusts spacing above/below and centers it */
 }
 
+/* --- MOBILE & GENERAL STYLES (Default) --- */
 .testimonials {
   text-align: center;
-  padding: 40px 20px;
-  margin: 40px 20px;             /* Adds space outside the block so it doesn't touch the screen edges */
-  padding: 40px 30px;            /* Adds breathing room inside the block */
-  border-radius: 15px;           /* Softens the corners for a modern, friendly feel */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-radius: 0;   /* Make edges sharp */
+  margin: 1.5em 1em; 
+  padding: 2.5em 1.5em; 
+  border-radius: 0; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial {
+  margin-bottom: 2em; /* Space between individual quotes */
+}
+
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+.testimonial p {
+  line-height: 1.6;
+  max-width: 45ch; /* Keeps lines of text from getting too wide/tiring to read */
+  margin: 0 auto 0.5em auto;
+}
+
+.testimonial span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em; /* Slightly smaller than the quote */
+}
+
+/* --- COMPUTER SCREENS (Min-width: 769px) --- */
+@media (min-width: 769px) {
+  .testimonials {
+    /* Larger padding for desktop screens to feel more "premium" */
+    padding: 4em 3em; 
+    max-width: 800px; /* Prevents the testimonial box from spanning the whole screen */
+    margin: 4em auto; /* Centers the card on the desktop page */
+  }
 }
 
 /* --- MOBILE STYLES (Default: Single Box) --- */
