@@ -1,6 +1,6 @@
 /**==========================================================
  * menu.js - Handles the mobile slide menu functionality
- */==========================================================
+ ============================================================*/
 
 // Wait for the DOM (Document Object Model HTML <-> JavaScript connection) to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {  // Adds event listener that fires when HTML is fully loaded and parsed
