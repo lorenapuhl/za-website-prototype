@@ -145,13 +145,22 @@ p {                               /* Styles for paragraph elements */
 .testimonials {
   text-align: center;
   padding: 40px 20px;
+  margin: 40px 20px;             /* Adds space outside the block so it doesn't touch the screen edges */
+  padding: 40px 30px;            /* Adds breathing room inside the block */
+  border-radius: 15px;           /* Softens the corners for a modern, friendly feel */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 0;   /* Make edges sharp */
 }
 
 .benefits {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  margin: 40px 20px;             /* Adds space outside the block so it doesn't touch the screen edges */
   padding: 40px 20px;
+  border-radius: 15px;           /* Softens the corners for a modern, friendly feel */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 0;     /* Make edges sharp */
 }
 
 
@@ -234,20 +243,21 @@ p {                               /* Styles for paragraph elements */
 .slide-menu {                     /* Styles for the sliding menu container (BASE CLASS)*/
   position: fixed;                /* Positions menu relative to viewport (stays in place when scrolling) */
   top: 0;                         /* Aligns menu to the top of the screen */
-  left: -300px;                   /* Positions menu 300px left of screen (hidden off-screen by default) */
   width: 280px;                   /* Sets menu width to 280 pixels */
   height: 100vh;                  /* Sets menu height to 100% of viewport height */
   background-color: var(--font-color);        /* Sets menu background */
   z-index: 1001;                  /* Places menu above most other elements (higher number = more forward) */
-  transition: left 0.3s ease;     /* Animates the left position change over 0.3 seconds */
   padding: 70px 20px 30px 20px;   /* Adds 70px top, 20px left/right, 30px bottom padding */
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);  /* Adds shadow to right side: 2px right, 0 down, 15px blur, 50% opaque black */
   overflow-y: auto;               /* Adds vertical scrollbar if content overflows */
   text-align: left;               /* Left-aligns text in the menu */
+  left: -100%;
+  transition: left 0.4s ease-in;   /* SLOWER exit when class is removed */
 }
 
 .slide-menu.open {                /* Applied when menu has "open" class via JavaScript (STATE CLASS) */
   left: 0;                        /* Moves menu to 0 from left (slides it onto screen) */
+  transition: left 0.7s ease-out;  /* FAST entrance when class is added */
 }
 
 /* Menu button base styles */
@@ -270,7 +280,6 @@ p {                               /* Styles for paragraph elements */
   width: 25px;                    /* Sets bar width to 25 pixels */
   height: 3px;                    /* Sets bar height to 3 pixels */
   background-color: white;        /* Sets bar color to white */
-  transition: all 0.3s ease;      /* Animates any changes to the bar over 0.3 seconds */
 }
 
 /* Overlay base styles */
@@ -325,7 +334,6 @@ p {                               /* Styles for paragraph elements */
   text-decoration: none;          /* Removes underline from links */
   font-size: 16px;                /* Sets font size to 16 pixels */
   letter-spacing: 1px;            /* Adds 1px space between letters */
-  transition: all 0.2s ease;      /* Animates any changes over 0.2 seconds */
   text-align: left;               /* Left-aligns the link text */
 }
 
