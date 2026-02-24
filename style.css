@@ -93,6 +93,10 @@ body {
    GENERAL STYLES
 ======================================== */
 
+html {
+  scroll-behavior: smooth; /* Makes all internal jumps feel fluid and expensive */
+}
+
 * {                               /* Selects ALL elements on the page */
   margin: 0;                      /* Removes default margin spacing from all elements */
   box-sizing: border-box;         /* Includes padding and border in element's total width/height */
@@ -167,6 +171,12 @@ p {                               /* Styles for paragraph elements */
   padding: 15px 20px; /* Adds space inside banner: 15px top/bottom, 20px left/right */
   z-index: 1000; /* Controls stacking order - higher number means banner appears above other content */
   box-shadow: 0 -5px 15px rgba(0,0,0,0.3); /* Adds shadow above banner: X offset, Y offset, blur, color */
+  transform: translateY(100%);      /* Pushes the banner completely off-bottom */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Professional "springy" ease */
+}
+
+.floating-banner.visible {
+  transform: translateY(0);         /* Brings it back to its natural position */
 }
 
 /* Container for all the content inside the banner (text and button) */
@@ -270,7 +280,7 @@ p {                               /* Styles for paragraph elements */
   left: 0;                        /* Starts overlay at left of screen */
   width: 100%;                    /* Makes overlay full screen width */
   height: 100%;                   /* Makes overlay full screen height */
-  background-color: rgba(var(--background-color-rgb), 0.8);
+  background-color: rgba(var(--background-color-rgb), 0.9);
   z-index: 999;                   /* Places overlay below menu (1001) but above other content */
   display: none;                  /* Hidden by default */
   backdrop-filter: blur(3px);     /* Adds 3px blur effect to content behind overlay */

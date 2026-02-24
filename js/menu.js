@@ -1,5 +1,5 @@
 /**==========================================================
- * menu.js - Handles the mobile slide menu functionality
+ * HAMBURGER SLIDE-IN MENU FUNCTIONALITY
  ============================================================*/
 
 // Wait for the DOM (Document Object Model HTML <-> JavaScript connection) to be fully loaded
@@ -51,4 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {  // Adds event listen
 
   // Optional: Log that menu initialized successfully
   console.log('Mobile menu initialized');  // Logs success message to browser console for debugging confirmation
+});
+
+/**==========================================================
+ * FLOATING BANNER FUNCTIONALITY
+ ============================================================*/
+
+window.addEventListener('scroll', function() {
+  const banner = document.querySelector('.floating-banner'); //Select an element from HTML document by its CSS class
+  if (window.scrollY > 300) {       // Triggers after scrolling 300px
+    banner.classList.add('visible');
+  } else {
+    banner.classList.remove('visible');
+  }
 });
