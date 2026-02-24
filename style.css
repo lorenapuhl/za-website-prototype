@@ -152,56 +152,59 @@ p {                               /* Styles for paragraph elements */
   border-radius: 0;   /* Make edges sharp */
 }
 
-/* --- MOBILE STYLES (Default) --- */
-/* This creates the "Single Box" look for small screens */
+/* --- MOBILE STYLES (Default: Single Box) --- */
 .benefits-container {
-  display: flex !important;   /* Turns on horizontal stacking */
-  flex-direction: row !important;
-  margin: 20px;
-  padding: 30px;
-  border-radius: 0;             /* Sharp corners */
+  display: flex !important;
+  flex-direction: column !important; /* Stacked inside one box for mobile */
+  margin: 1.5em;                   /* Margin relative to text size */
+  padding: 2.5em 1.5em;            /* Padding relative to text size */
+  border-radius: 0;                /* Sharp corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .benefit-item {
-  margin-bottom: 30px;          /* Space between benefits inside the single box */
+  /* This ensures the item only takes as much space as the text needs */
+  flex: 0 0 auto; 
+  margin-bottom: 2em;             /* Space between items in the single box */
   text-align: center;
 }
 
 .benefit-item:last-child {
-  margin-bottom: 0;             /* Removes extra space at the very bottom */
+  margin-bottom: 0;
 }
 
-
-/* --- COMPUTER SCREENS (Min-width: 769px) --- */
+/* --- COMPUTER SCREENS (Three Separate Boxes) --- */
 @media (min-width: 769px) {
   .benefits {
-    display: block; 
-    padding: 40px 0;
+    display: block;
+    padding: 4em 0;               /* Scales padding with desktop font-size */
   }
 
   .benefits-container {
-    display: flex !important;   /* Turns on horizontal stacking */
-    flex-direction: row !important;
+    flex-direction: row !important; /* Side-by-side */
     justify-content: center;
-    gap: 20px;
-    width: 100%;
+    align-items: stretch;          /* Keeps all boxes same height for a clean line */
+    gap: 1.5em;                    /* Gap between boxes relative to text size */
+    width: 90%;                    /* Fluid width */
     max-width: 1200px;
     margin: 0 auto;
-    background-color: transparent; /* Removes the single box color */
-    box-shadow: none;             /* Removes the single box shadow */
+    background-color: transparent; /* Dissolve the single box wrapper */
+    box-shadow: none;
     border: none;
+    padding: 0;                    /* Reset container padding for desktop */
   }
 
   .benefit-item {
-    flex: 1;
-    padding: 35px 25px;
+    /* flex: 1 (grow) 1 (shrink) auto (base size on text) */
+    flex: 1 1 auto; 
+    padding: 2.5em 1.5em;          /* Internal space relative to font */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    margin-bottom: 0;            /* Reset mobile margin */
+    margin-bottom: 0;
   }
 }
+
 
 /* ========================================
    FLOATING BANNER
