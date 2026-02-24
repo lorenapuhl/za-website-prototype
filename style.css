@@ -152,17 +152,56 @@ p {                               /* Styles for paragraph elements */
   border-radius: 0;   /* Make edges sharp */
 }
 
-.benefits {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin: 40px 20px;             /* Adds space outside the block so it doesn't touch the screen edges */
-  padding: 40px 20px;
-  border-radius: 15px;           /* Softens the corners for a modern, friendly feel */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-radius: 0;     /* Make edges sharp */
+/* --- MOBILE STYLES (Default) --- */
+/* This creates the "Single Box" look for small screens */
+.benefits-container {
+  display: flex !important;   /* Turns on horizontal stacking */
+  flex-direction: row !important;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 0;             /* Sharp corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.benefit-item {
+  margin-bottom: 30px;          /* Space between benefits inside the single box */
+  text-align: center;
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;             /* Removes extra space at the very bottom */
+}
+
+
+/* --- COMPUTER SCREENS (Min-width: 769px) --- */
+@media (min-width: 769px) {
+  .benefits {
+    display: block; 
+    padding: 40px 0;
+  }
+
+  .benefits-container {
+    display: flex !important;   /* Turns on horizontal stacking */
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent; /* Removes the single box color */
+    box-shadow: none;             /* Removes the single box shadow */
+    border: none;
+  }
+
+  .benefit-item {
+    flex: 1;
+    padding: 35px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;            /* Reset mobile margin */
+  }
+}
 
 /* ========================================
    FLOATING BANNER
