@@ -1,4 +1,4 @@
-/* style.css - Blackstudio Official Styles */
+/* style.css */
 
 /* ========================================
    BASIC FORMATTING
@@ -9,7 +9,8 @@
  * margin: spacing between <div> boxes [Box 1]    ← 20px space →    [Box 2]
    ↑                          ↑
    └── Extra space around each box
- * padding: Space inside an element between content and its border ┌─────────────────────┐
+ * padding: Space inside an element between content and its border 
+┌─────────────────────┐
 │                     │ ← 20px padding
 │    Text content     │
 │                     │
@@ -63,22 +64,17 @@
  FONTS
  ======================================== */
 
-/* MAIN TITLE <h1> tag*/
+/* MAIN TITLE <h1> tag (for screens larger than 900px)
+* IMPORTANT: h1 sizing overriden in media queries for different screen widths*/
+
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); /* Imports Tenor Sans from Google Fonts */
 
 h1 {                             /* Styles for the main heading */
   font-family: 'Tenor Sans', sans-serif; /* Uses Tenor Sans, falls back to sans-serif */
   font-weight: 400;               /* Tenor Sans typically uses a regular weight for this look */
   letter-spacing: 0.2em;          /* Adds wide spacing to match the 'Z A N N A' style */
-  font-size: 120px;                /* Sets font size to 72 pixels */
-  color: var(--header-color); 
-  
-  /* SIZING LOGIC */
-  width: 90%;                /* Sets the container to 3/4 of page width */
-  margin: 0 auto;            /* Centers the header if you want it aligned */
-  font-size: 15vw;           /* 15vw is a good starting point to fill the 75% width */
-  text-align: center;        /* Keeps the text balanced within that 75% */
-  line-height: 1.1;          /* Prevents huge gaps if the text wraps */
+  color: var(--header-color);   
+  font-size: 7vw;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Imports Montserrat from Google Fonts */
@@ -93,10 +89,9 @@ body {
 }
 
 
-
-   /* ========================================
-   STYLES
-   ======================================== */
+/* ========================================
+   GENERAL STYLES
+======================================== */
 
 * {                               /* Selects ALL elements on the page */
   margin: 0;                      /* Removes default margin spacing from all elements */
@@ -104,14 +99,6 @@ body {
   padding: 0;                     /* Removes default padding spacing from all elements */
   text-align: center;             /* Centers all text content by default */
 }
-
-/* NAVIGATION STYLE
- * Selects <ul> elements that are inside <nav> elements
- * list-style: none; -     Removes bullet points from lists
- * display: flex; - Makes items display horizontally
- * gap: 20px; - Adds 20px space between flex items
- * padding: 20px; - Adds 20px space inside the element (all sides)
- */
  
  nav {                            /* Styles for the navigation container */
   display: flex;                  /* Uses flexbox layout for the nav */
@@ -125,12 +112,6 @@ nav ul {                          /* Styles for unordered lists inside navigatio
   padding: 20px;                  /* Adds 20px space inside the ul around all sides */
 }
 
-/* HREF STYLES <a> tags
- * color: white; - Makes link text white
- * text-decoration: none; - Removes default underline from links
- * font-weight: bold; - Makes text bold
- */
-
 nav a {                           /* Styles for anchor links inside navigation */
   color:  var(--font-color);                   /* Sets link text color to white */
   text-decoration: none;          /* Removes the default underline from links */
@@ -138,27 +119,15 @@ nav a {                           /* Styles for anchor links inside navigation *
 }
 
 /* HOVER EFFECTS for 
- * :hover is a pseudo-class (state-based selector) --> Applies styles when mouse hovers over the elementlinks 
- * Changes to colour #ff0
+ * :hover is a pseudo-class (state-based selector) --> Applies styles when mouse hovers over the element-links 
 */
 nav a:hover {                     /* Applies when mouse hovers over navigation links */
   color: var(--hover-color);                    /* Changes link color to medium gray on hover */
 }
 
-/* PARAGRAPH STYLES <p>
- */
 p {                               /* Styles for paragraph elements */
   margin: 20px;                   /* Adds 20px margin around all sides of paragraphs */
   color: var(--font-color);                       /* Sets paragraph text color to light gray */
-}
-
-/* FOOTER <footer> section
- * 40px = top and bottom padding, 20px = left and right padding
- * order-top-width: 1px; border-top-style: solid; border-top-color: #333; (dark gray)
- */
-footer {                          /* Styles for the footer section */
-  padding: 40px 20px;             /* Adds 40px padding top/bottom, 20px left/right */
-  border-top: 1px solid #333;     /* Adds a 1px solid dark gray line at the top */
 }
 
 .fine-line {
@@ -186,58 +155,65 @@ footer {                          /* Styles for the footer section */
    FLOATING BANNER
    ======================================== */
 
+/* Floating banner container - this creates a bar that stays at the bottom of the screen */
 .floating-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--banner-color);
-  backdrop-filter: blur(10px); /* Modern frosted glass look */
-  border-top: 1px solid #eaeaea;
-  padding: 15px 20px;
-  z-index: 1000; /* Keeps it above the IG feed */
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+  position: fixed;  /* Makes the banner stay in one place even when scrolling */
+  bottom: 0;        /* Positions the banner at the very bottom of the viewport */
+  left: 0;          /* Aligns banner to the left edge */
+  width: 100%;      /* Makes banner stretch across the full width of the screen */
+  background: var(--banner-color);  /* Uses a CSS variable for banner background color - you can replace this with a specific color like #000000 or #333 */
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect by blurring content behind the banner */
+  border-top: 1px solid #eaeaea; /* Adds a thin light gray line at the top of banner */
+  padding: 15px 20px; /* Adds space inside banner: 15px top/bottom, 20px left/right */
+  z-index: 1000; /* Controls stacking order - higher number means banner appears above other content */
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.3); /* Adds shadow above banner: X offset, Y offset, blur, color */
 }
 
+/* Container for all the content inside the banner (text and button) */
 .banner-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;           /* Uses flexbox layout to arrange children horizontally */
+  justify-content: space-between; /* Pushes children apart: text on left, button on right */
+  align-items: center;      /* Vertically centers all children in the container */
+  max-width: 1200px;        /* Prevents content from stretching too wide on large screens */
+  margin: 0 auto;          /* Centers the content block horizontally (0 top/bottom, auto left/right) */
 }
 
+/* Styles for the paragraph text inside the banner */
 .banner-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--banner-font);
+  margin: 0;               /* Removes default paragraph margins */
+  font-size: 0.95rem;      /* Sets text size to 95% of root font size (usually about 15px) */
+  font-weight: 500;        /* Sets text to medium boldness (500 out of 900) */
+  color: var(--banner-font); /* Uses CSS variable for text color - replace with color like #ffffff */
 }
 
+/* Container for the button and any other right-side elements */
 .cta-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  display: flex;           /* Arranges button and other elements horizontally */
+  align-items: center;      /* Vertically centers items in the container */
+  gap: 20px;               /* Adds 20px space between items (like between button and icon if added) */
 }
 
+/* Styles for the call-to-action button */
 .cta-button {
-  background: #000;
-  color: var(--banner-font);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 50px; /* Pill shape for a modern look */
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
+  background: var(--banner-font); /* Replace this with your button color, e.g., #ff0000 for red */
+  color: white;            /* Text color inside button - change to your preference */
+  padding: 10px 20px;      /* Space inside button: 10px top/bottom, 20px left/right */
+  text-decoration: none;    /* Removes underline from link */
+  border-radius: 50px;     /* Makes button edges super round for pill shape (use 5px for slightly round, 0 for square) */
+  font-weight: 600;        /* Makes text semi-bold (600 out of 900) */
+  font-size: 0.85rem;      /* Sets text size smaller (about 13-14px) */
+  text-transform: uppercase; /* Transforms text to ALL CAPS */
 }
 
-/* Mobile Responsiveness */
+/* Media query - only applies styles when screen width is 768px or less (mobile devices) */
 @media (max-width: 768px) {
+  /* Mobile styles for banner content container */
   .banner-content {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    flex-direction: column; /* Stacks children vertically instead of horizontally */
+    gap: 10px;              /* Adds space between stacked elements */
+    text-align: center;     /* Centers text horizontally */
   }
+  /* Note: The button will automatically stack below text due to flex-direction: column */
 }
 
 /* ========================================
@@ -245,7 +221,7 @@ footer {                          /* Styles for the footer section */
    ======================================== */
 
 /* Base styles for slide menu - these apply on ALL devices */
-.slide-menu {                     /* Styles for the sliding menu container */
+.slide-menu {                     /* Styles for the sliding menu container (BASE CLASS)*/
   position: fixed;                /* Positions menu relative to viewport (stays in place when scrolling) */
   top: 0;                         /* Aligns menu to the top of the screen */
   left: -300px;                   /* Positions menu 300px left of screen (hidden off-screen by default) */
@@ -260,7 +236,7 @@ footer {                          /* Styles for the footer section */
   text-align: left;               /* Left-aligns text in the menu */
 }
 
-.slide-menu.open {                /* Applied when menu has "open" class (via JavaScript) */
+.slide-menu.open {                /* Applied when menu has "open" class via JavaScript (STATE CLASS) */
   left: 0;                        /* Moves menu to 0 from left (slides it onto screen) */
 }
 
@@ -276,11 +252,11 @@ footer {                          /* Styles for the footer section */
   border-radius: 5px;             /* Rounds the corners by 5 pixels */
   flex-direction: column;         /* Stacks child elements (bars) vertically */
   gap: 5px;                       /* Adds 5px space between each bar */
-  border: 1px solid #333;         /* Adds a 1px solid dark gray border */
+  /*order: 1px solid #333;          Adds a 1px solid dark gray border */
   display: none;                  /* Hidden by default (shown only on mobile) */
 }
 
-.menu-button .bar {               /* Styles for the three bars inside hamburger button */
+.menu-button .bar {               /* Styles for the three bars inside hamburger button (DESCENDANT SELECTOR) */
   width: 25px;                    /* Sets bar width to 25 pixels */
   height: 3px;                    /* Sets bar height to 3 pixels */
   background-color: white;        /* Sets bar color to white */
@@ -301,7 +277,7 @@ footer {                          /* Styles for the footer section */
 }
 
 .overlay.show {                   /* Applied when overlay has "show" class (via JavaScript) */
-  display: block;                 /* Makes overlay visible */
+  display: block;                 /* Makes overlay visible as block */
 }
 
 /* Menu content styles */
@@ -343,33 +319,14 @@ footer {                          /* Styles for the footer section */
   text-align: left;               /* Left-aligns the link text */
 }
 
-.close-button {
-    background: transparent; /* Removes any default gray background */
-    border: none;            /* Removes the solid frame around the X */
-    outline: none;           /* Removes the box that appears when clicked */
-    box-shadow: none;        /* Ensures no shadow is creating a 'frame' effect */
-    cursor: pointer;        /* Ensures the user knows it's clickable */
-    padding: 10px;           /* Gives the user a larger area to tap on mobile */
-    font-size: 24px;         /* Adjust the size of the X to your liking */
-    color: var(--text-color); /* Matches your branding */
-}
-
-/* Force-remove the border even when the button is active or focused */
-.close-button:focus,
-.close-button:active {
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
-   ======================================== */
+/* =========================================================
+   RESPONSIVE DESIGN (SCREEN WIDTH) - MEDIA QUERIES
+   ========================================================= */
 
 /* Tablet Styles (screens smaller than 900px) */
 @media screen and (max-width: 900px) {  /* Applies only when screen width is 900px or less */
   h1 {
-    font-size: 48px;  /* Smaller title for tablets */  /* Reduces h1 size from 72px to 48px */
+    font-size: 10vw;  /* Smaller title for tablets */  /* Reduces h1 size from 72px to 48px */
   }
   
   nav ul {
@@ -388,7 +345,7 @@ footer {                          /* Styles for the footer section */
 /* Mobile Styles (screens smaller than 600px) */
 @media screen and (max-width: 600px) {  /* Applies only when screen width is 600px or less */
   h1 {
-    font-size: 36px;  /* Even smaller for mobile */  /* Further reduces h1 size to 36px */
+    font-size: 10vw;  /* Even smaller for mobile */  /* Further reduces h1 size to 36px */
     letter-spacing: 2px;  /* Reduce letter spacing */  /* Reduces space between letters */
     margin-top: 80px;  /* Adds margin above the h1 instead of padding */
   }
@@ -411,16 +368,6 @@ footer {                          /* Styles for the footer section */
     margin: 10px;  /* Further reduces paragraph margin */
   }
   
-  footer {
-    padding: 30px 15px;  /* Reduces footer padding */
-    font-size: 14px;  /* Reduces footer font size */
-  }
-  
-  address {
-    line-height: 1.6;  /* Sets line height for address text */
-    font-size: 14px;  /* Reduces address font size */
-  }
-  
   /* Hide desktop header on mobile */
   header {
     display: none !important;  /* Hides the desktop header on mobile devices */
@@ -438,7 +385,7 @@ footer {                          /* Styles for the footer section */
 /* Small Mobile Styles (screens smaller than 400px) */
 @media screen and (max-width: 400px) {  /* Applies only on very small screens */
   h1 {
-    font-size: 28px;  /* Smallest size for very small phones */  /* Further reduces h1 to 28px */
+    font-size: 10vw;  /* Smallest size for very small phones */  /* Further reduces h1 to 28px */
   }
   
   nav ul {
@@ -446,9 +393,9 @@ footer {                          /* Styles for the footer section */
   }
 }
 
-/* ========================================
+/* ==================================================
    DESKTOP STYLES (screens larger than 600px)
-   ======================================== */
+   ================================================== */
 @media screen and (min-width: 601px) {  /* Applies only on screens wider than 600px (desktop/tablet) */
   /* Hide ALL mobile menu elements on desktop */
   .menu-button,
@@ -459,11 +406,11 @@ footer {                          /* Styles for the footer section */
   
   /* Ensure desktop header is visible */
   header {
-    display: block !important;  /* Forces desktop header to be visible */
+    display: block !important;  /* Forces desktop header to be visible, setting element to block style */
   }
   
   /* Make sure desktop navigation is visible */
   nav ul {
-    display: flex !important;  /* Forces navigation to display as flex on desktop */
+    display: flex !important;  /* Forces navigation to display as flex on desktop (single horizontal row)*/
   }
 }
