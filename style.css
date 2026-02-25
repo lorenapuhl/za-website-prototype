@@ -321,8 +321,8 @@ p {                               /* Styles for paragraph elements */
 
 
 .btn-reserve {
-  background-color: #3D3D3D;
-  color: var(--header-color);
+  background-color: var(--header-color);
+  color: #FFFFFF; 
   border: none;
   padding: 12px 28px;
   border-radius: 6px;
