@@ -125,9 +125,6 @@ Helper function to manage the "underlined/bold" look of the current day
 // The first part is the class we want to change ('active').
 // The second part is a boolean condition (i === index).
 
-The second part is a boolean condition (i === index).
-
-
 function updateActiveTab(index) {
   // Selects all tabs created earlier
   const tabs = document.querySelectorAll('.day-tab');
