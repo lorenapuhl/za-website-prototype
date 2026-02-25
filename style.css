@@ -41,7 +41,13 @@
  
 /* ========================================
  MAIN VARIABLES
- ======================================== */
+ ========================================== */
+ 
+   /* Import fonts */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); /* Imports Tenor Sans from Google Fonts */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Imports Montserrat from Google Fonts */
    
 :root {
   /* Defining the variables using the tones from your images */
@@ -67,8 +73,6 @@
 /* MAIN TITLE <h1> tag (for screens larger than 900px)
 * IMPORTANT: h1 sizing overriden in media queries for different screen widths*/
 
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); /* Imports Tenor Sans from Google Fonts */
-
 h1 {                             /* Styles for the main heading */
   font-family: 'Tenor Sans', sans-serif; /* Uses Tenor Sans, falls back to sans-serif */
   font-weight: 400;               /* Tenor Sans typically uses a regular weight for this look */
@@ -76,8 +80,6 @@ h1 {                             /* Styles for the main heading */
   color: var(--header-color);   
   font-size: 7vw;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Imports Montserrat from Google Fonts */
 
 body {
   /* Styles for the main body element */
