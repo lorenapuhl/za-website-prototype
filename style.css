@@ -222,58 +222,50 @@ p {                               /* Styles for paragraph elements */
 /* ========================================
    BENEFITS
    ======================================== */
+/* ========================================
+   BENEFITS (Slider Version)
+   ======================================== */
+.benefits {
+  text-align: center;
+  padding: 2em 0;
+  overflow: hidden; /* Prevents page-wide horizontal scrolling */
+}
+
 .benefits-container {
   display: flex !important;
-  flex-direction: column !important; /* Stacked inside one box for mobile */
-  margin: 1.5em;                   /* Margin relative to text size */
-  padding: 2.5em 1.5em;            /* Padding relative to text size */
-  border-radius: 0;                /* Sharp corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  flex-direction: row !important; /* Force horizontal even on mobile */
+  overflow-x: auto;             /* Enable horizontal swipe */
+  scroll-snap-type: x mandatory; /* Magnet effect */
+  gap: 1.5em;
+  padding: 1.5em 15% 3em 15%;   /* 15% side padding for the "center" effect */
+  scrollbar-width: none;        /* Hide scrollbar Firefox */
+  -ms-overflow-style: none;     /* Hide scrollbar Edge */
+}
+
+.benefits-container::-webkit-scrollbar {
+  display: none;                /* Hide scrollbar Chrome/Safari */
 }
 
 .benefit-item {
-  /* This ensures the item only takes as much space as the text needs */
-  flex: 0 0 auto; 
-  margin-bottom: 2em;             /* Space between items in the single box */
+  flex: 0 0 75%;                /* Card takes up 75% of view */
+  scroll-snap-align: center;    /* Magnet snap to center */
+  padding: 2.5em 1.5em;
+  border-radius: 0;             /* ZANNA sharp edges */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.benefit-item:last-child {
-  margin-bottom: 0;
-}
-
-/* --- COMPUTER SCREENS (Three Separate Boxes) --- */
+/* --- COMPUTER SCREENS (Desktop adjustments) --- */
 @media (min-width: 769px) {
-  .benefits {
-    display: block;
-    padding: 4em 0;               /* Scales padding with desktop font-size */
-  }
-
-  .benefits-container {
-    flex-direction: row !important; /* Side-by-side */
-    justify-content: center;
-    align-items: stretch;          /* Keeps all boxes same height for a clean line */
-    gap: 1.5em;                    /* Gap between boxes relative to text size */
-    width: 90%;                    /* Fluid width */
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: transparent; /* Dissolve the single box wrapper */
-    box-shadow: none;
-    border: none;
-    padding: 0;                    /* Reset container padding for desktop */
-  }
-
   .benefit-item {
-    /* flex: 1 (grow) 1 (shrink) auto (base size on text) */
-    flex: 1 1 auto; 
-    padding: 2.5em 1.5em;          /* Internal space relative to font */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    margin-bottom: 0;
+    flex: 0 0 350px;            /* Fixed elegant width on computers */
+  }
+  
+  .benefits-container {
+    padding-inline: 20%;        /* More "peek" space on larger screens */
   }
 }
-
 
 /* ========================================
    FLOATING BANNER

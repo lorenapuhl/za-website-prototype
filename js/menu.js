@@ -71,19 +71,26 @@ window.addEventListener('scroll', function() {
  ============================================================*/
 
 window.addEventListener('load', () => {
-  const slider = document.querySelector('.testimonial-slider');
-  const cards = document.querySelectorAll('.testimonial-card');
+  // Function to center a slider's middle child
+  const centerSlider = (sliderSelector, cardSelector) => {
+    const slider = document.querySelector(sliderSelector);
+    const cards = document.querySelectorAll(cardSelector);
 
-  if (cards.length > 0) {
-    // Find index 1 (the middle of 3)
-    const middleIndex = Math.floor(cards.length / 2);
-    const targetCard = cards[middleIndex];
+    if (slider && cards.length > 0) {
+      const middleIndex = Math.floor(cards.length / 2);
+      const targetCard = cards[middleIndex];
 
-    // Smoothly tell the browser to snap to this specific card
-    targetCard.scrollIntoView({ 
-      behavior: 'smooth', 
-      inline: 'center', 
-      block: 'nearest' 
-    });
-  }
+      targetCard.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      });
+      
+      console.log(`Centered ${sliderSelector} at index ${middleIndex}`);
+    }
+  };
+
+  // Run the centering function for both sections
+  centerSlider('.testimonial-slider', '.testimonial-card');
+  centerSlider('.benefits-container', '.benefit-item');
 });
