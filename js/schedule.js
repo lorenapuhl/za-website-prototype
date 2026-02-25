@@ -53,7 +53,7 @@ async function initSchedule() {
       };
       
       // Injects the newly created tab into the navigation bar in the HTML
-      selector: This is the variable you created earlier that "points" to the <div id="daySelector"> in your HTML.
+      //selector: This is the variable you created earlier that "points" to the <div id="daySelector"> in your HTML.
 
       //tab: This is the specific "day button" (like "DOM 22") that you just finished building in the lines above.
       //.appendChild(): built-in JavaScript method. It takes an element and sticks it inside another one. This, sticking tab insie the selector (daySelector in HTML) element
