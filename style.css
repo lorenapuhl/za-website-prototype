@@ -228,6 +228,11 @@ p {                               /* Styles for paragraph elements */
   overflow: hidden; /* Prevents page-wide horizontal scrolling */
 }
 
+.benefits h2 {
+  margin-bottom: 2em;
+  color: var(--font-color);
+}
+
 .benefits-container {
   display: flex !important;
   flex-direction: row !important; /* Force horizontal even on mobile */
@@ -270,6 +275,11 @@ p {                               /* Styles for paragraph elements */
 .schedule-section {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.schedule-section h2 {
+  margin-bottom: 2em;
+  color: var(--font-color);
 }
 
 .day-selector {
