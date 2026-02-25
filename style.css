@@ -402,6 +402,13 @@ p {                               /* Styles for paragraph elements */
   font-weight: 600;        /* Makes text semi-bold (600 out of 900) */
   font-size: 0.85rem;      /* Sets text size smaller (about 13-14px) */
   text-transform: uppercase; /* Transforms text to ALL CAPS */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* This makes the hover look smooth */
+}
+
+.cta-button:hover {
+  background-color: #1A1A1A; /* Darkens slightly */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Media query - only applies styles when screen width is 768px or less (mobile devices) */

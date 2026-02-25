@@ -88,7 +88,7 @@ async function initSchedule() {
             </div>
           </div>
           <div class="class-actions">
-            <button class="btn-reserve">'Reservar'</button>
+            <button class="btn-reserve">Reservar</button>
           </div>
         `;
         // Adds the finished row into the day container
