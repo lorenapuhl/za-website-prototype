@@ -1,4 +1,7 @@
-/* style.css */
+ /* Import fonts*/
+ @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 /* ========================================
    BASIC FORMATTING
@@ -42,12 +45,7 @@
 /* ========================================
  MAIN VARIABLES
  ========================================== */
- 
-   /* Import fonts */
- 
- @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); /* Imports Tenor Sans from Google Fonts */
- 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Imports Montserrat from Google Fonts */
+
    
 :root {
   /* Defining the variables using the tones from your images */
