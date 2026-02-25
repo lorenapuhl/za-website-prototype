@@ -316,6 +316,31 @@ p {                               /* Styles for paragraph elements */
 
 .schedule-slider::-webkit-scrollbar { display: none; }
 
+/* ========================================
+   SCHEDULE COMPONENTS
+   ======================================== */
+
+/* This is the main container for one class entry (e.g., Yin Yoga) */
+.schedule-row {
+  display: flex;
+  flex-direction: column;   /* Stacks the text and button vertically */
+  align-items: center;       /* Centers the text and button horizontally */
+  padding: 40px 20px;       /* Adds 40px of space at the top and bottom */
+  text-align: center;       /* Centers the text inside the div */
+  border-bottom: 1px solid rgba(61, 61, 61, 0.1); /* Adds a very light divider line */
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: Subtle hover effect for the whole row */
+.schedule-row:hover {
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+/* Remove the line from the last class so it doesn't look cut off */
+.schedule-row:last-child {
+  border-bottom: none;
+}
+
 .day-environment {
   min-width: 100%;
   scroll-snap-align: start;
