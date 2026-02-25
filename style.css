@@ -288,13 +288,15 @@ p {                               /* Styles for paragraph elements */
   gap: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--header-color);
+  margin-bottom: 20px;
 }
 
 .day-tab {
   cursor: pointer;
+  padding-bottom: 8px;
   opacity: 0.5;
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .day-tab.active {
@@ -309,6 +311,7 @@ p {                               /* Styles for paragraph elements */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hide scrollbar for Chrome/Safari below */
+  margin-bottom: 80px; /* Pushes the next section further down */
 }
 
 .schedule-slider::-webkit-scrollbar { display: none; }
@@ -329,9 +332,7 @@ p {                               /* Styles for paragraph elements */
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
-  
-  /* This makes the hover look smooth */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 15px; /* Adds space above the button */
 }
 
 .btn-reserve:hover {
