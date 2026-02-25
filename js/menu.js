@@ -65,3 +65,25 @@ window.addEventListener('scroll', function() {
     banner.classList.remove('visible');
   }
 });
+
+/**==========================================================
+ * CENTER TESTIMONIAL SLIDER
+ ============================================================*/
+
+window.addEventListener('load', () => {
+  const slider = document.querySelector('.testimonial-slider');
+  const cards = document.querySelectorAll('.testimonial-card');
+
+  if (cards.length > 0) {
+    // Find index 1 (the middle of 3)
+    const middleIndex = Math.floor(cards.length / 2);
+    const targetCard = cards[middleIndex];
+
+    // Smoothly tell the browser to snap to this specific card
+    targetCard.scrollIntoView({ 
+      behavior: 'smooth', 
+      inline: 'center', 
+      block: 'nearest' 
+    });
+  }
+});
