@@ -220,9 +220,6 @@ p {                               /* Styles for paragraph elements */
 }
 
 /* ========================================
-   BENEFITS
-   ======================================== */
-/* ========================================
    BENEFITS (Slider Version)
    ======================================== */
 .benefits {
@@ -265,6 +262,62 @@ p {                               /* Styles for paragraph elements */
   .benefits-container {
     padding-inline: 20%;        /* More "peek" space on larger screens */
   }
+}
+
+/* ========================================
+   CLASS SCHEDULES
+   ======================================== */
+.schedule-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E0DDD7;
+}
+
+.day-tab {
+  cursor: pointer;
+  opacity: 0.5;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.day-tab.active {
+  opacity: 1;
+  font-weight: bold;
+  border-bottom: 2px solid var(--header-color);
+}
+
+.schedule-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Chrome/Safari below */
+}
+
+.schedule-slider::-webkit-scrollbar { display: none; }
+
+.day-environment {
+  min-width: 100%;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Grayed out style for past events */
+.passed-event {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.btn-passed {
+  background-color: #E0DDD7 !important;
+  color: #888 !important;
+  cursor: default;
 }
 
 /* ========================================

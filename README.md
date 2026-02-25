@@ -15,7 +15,10 @@ This prototype was designed to establish an online presence for instagram-based 
 website-prototype/
 ├── index.html # Main HTML file
 ├── style.css # All styles and design
-└── README.md # Project documentation
+├── schedule.json # Schedule data
+├── README.md # Project documentation
+└── js/ # JavaScript files
+	└──  main.js # Main features
 
 
 ## Technologies Used
@@ -29,4 +32,4 @@ website-prototype/
 
 ## Live Demo
 
-Visit the live site: [https://lorenapuhl.github.io/zanna-website-prototype/](https://lorenapuhl.github.io/zanna-website-prototype/)
+Visit the live site: [https://lorenapuhl.github.io/za-website-prototype/](https://lorenapuhl.github.io/zanna-website-prototype/)

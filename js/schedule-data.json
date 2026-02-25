@@ -1,0 +1,10 @@
+{
+  "Lunes": [
+    { "name": "Yin Yoga", "time": "17:00", "duration": "1 hora", "instructor": "Andrea Galván", "status": "green" },
+    { "name": "Vinyasa Flow", "time": "18:30", "duration": "1.5 horas", "instructor": "Marco Polo", "status": "green" }
+  ],
+  "Martes": [
+    { "name": "Power Yoga", "time": "09:00", "duration": "1 hora", "instructor": "Lucia Sanz", "status": "green" },
+    { "name": "Meditación", "time": "20:00", "duration": "30 min", "instructor": "Zen Master", "status": "green" }
+  ]
+}
