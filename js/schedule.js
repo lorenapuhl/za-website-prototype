@@ -83,8 +83,11 @@ async function initSchedule() {
         row.innerHTML = `
              <h3>${item.name}</h3> 
              <p>${item.bTime} - ${item.eTime}</p>
-              <p>${item.instructor}</p>
-            <button class="btn-reserve">Reservar</button>
+             <p>${item.instructor}</p>
+             <div class="class-actions">
+                <span class="status-dot ${item.status}"></span>
+                <button class="btn-reserve">Reservar</button>
+             </div>
         `;
         // Adds the finished row into the day container
         dayEnv.appendChild(row);

@@ -367,6 +367,32 @@ p {                               /* Styles for paragraph elements */
   flex-shrink: 0;
 }
 
+/* Container to keep dot and button aligned */
+.class-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Space between the green dot and the button */
+  margin-top: 15px;
+}
+
+/* The Base Shape of the dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  display: inline-block;
+}
+
+/* The Green Color logic */
+.status-dot.green {
+  background-color: #4CAF50; /* A clean, "Yoga" Zen green */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Optional: Subtle glow */
+}
+
+/* Ready for future status colors */
+.status-dot.orange { background-color: #FF9800; }
+.status-dot.red { background-color: #F44336; }
 
 .btn-reserve {
   background-color: var(--header-color);

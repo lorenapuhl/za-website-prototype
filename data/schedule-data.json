@@ -1,10 +1,10 @@
 {
   "Lunes": [
     { "name": "Yin Yoga", "bTime": "17:00", "eTime": "18:30", "instructor": "Andrea Galván", "status": "green" },
-    { "name": "Vinyasa Flow", "bTime": "18:30", "eTime": "20:00", "instructor": "Marco Polo", "status": "green" }
+    { "name": "Vinyasa Flow", "bTime": "18:30", "eTime": "20:00", "instructor": "Marco Polo", "status": "red" }
   ],
   "Martes": [
     { "name": "Power Yoga", "bTime": "09:00", "eTime": "10:00", "instructor": "Lucia Sanz", "status":"green"},
-    { "name": "Meditación", "bTime": "20:00", "eTime": "21:00", "instructor": "Zen Master", "status": "green" }
+    { "name": "Meditación", "bTime": "20:00", "eTime": "21:00", "instructor": "Zen Master", "status": "orange" }
   ]
 }
