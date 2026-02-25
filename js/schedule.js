@@ -31,7 +31,7 @@ async function initSchedule() {
       const tab = document.createElement('div');
       
       // Syntax: Template literals (` `) allow embedding variables/logic inside plain text. 
-      T//One-line version of an if-else statement: (condition ? ifTrue : ifFalse)
+      //One-line version of an if-else statement: (condition ? ifTrue : ifFalse)
       // Placeholder ${} becomes: condition: if index == 0: tab.className = 'active', else: tab.className = ''
       // This adds the 'active' class only to the first tab (index 0)
       // 'active' tab is the currently highlighted tab, i.e. day of interest
