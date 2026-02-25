@@ -5,7 +5,7 @@
 
 async function initSchedule() {
   try {
-    const response = await fetch('schedule-data.json');
+    const response = await fetch('../data/schedule-data.json');
     const data = await response.json();
     
     const slider = document.getElementById('scheduleSlider');
