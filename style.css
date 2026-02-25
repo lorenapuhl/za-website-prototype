@@ -331,6 +331,26 @@ p {                               /* Styles for paragraph elements */
   transition: background-color 0.3s ease;
 }
 
+.schedule-row h3 {
+  font-size: 1.5rem;          /* Makes the class name (e.g., Yin Yoga) the focal point */
+  margin: 0 0 10px 0;         /* Removes top margin, adds space below for the time */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.schedule-row p {
+  font-size: 1rem;            /* Standard readable size for details */
+  margin: 4px 0;              /* Tight spacing between the time line and instructor line */
+  line-height: 1.4;
+}
+
+/* Optional: Target the instructor specifically if you want it even softer */
+.schedule-row p:last-of-type {
+  font-style: italic;
+  margin-bottom: 15px;        /* Adds a gap before the "Reservar" button */
+}
+
+
 /* Optional: Subtle hover effect for the whole row */
 .schedule-row:hover {
   background-color: rgba(255, 255, 255, 0.3); 

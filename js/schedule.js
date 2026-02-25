@@ -81,15 +81,10 @@ async function initSchedule() {
         
         // Injects a complex block of HTML using data from the JSON (item.name, item.time, etc.)
         row.innerHTML = `
-          <div class="class-info">
-            <div class="text-group">
-              <h3>${item.name} <span class="duration">${item.time} - ${item.duration}</span></h3>
-              <p class="instructor">${item.instructor}</p>
-            </div>
-          </div>
-          <div class="class-actions">
+             <h3>${item.name}</h3> 
+             <p>${item.bTime} - ${item.eTime}</p>
+              <p>${item.instructor}</p>
             <button class="btn-reserve">Reservar</button>
-          </div>
         `;
         // Adds the finished row into the day container
         dayEnv.appendChild(row);

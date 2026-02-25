@@ -1,10 +1,10 @@
 {
   "Lunes": [
-    { "name": "Yin Yoga", "time": "17:00", "duration": "1 hora", "instructor": "Andrea Galván", "status": "green" },
-    { "name": "Vinyasa Flow", "time": "18:30", "duration": "1.5 horas", "instructor": "Marco Polo", "status": "green" }
+    { "name": "Yin Yoga", "bTime": "17:00", "eTime": "18:30", "instructor": "Andrea Galván", "status": "green" },
+    { "name": "Vinyasa Flow", "bTime": "18:30", "eTime": "20:00", "instructor": "Marco Polo", "status": "green" }
   ],
   "Martes": [
-    { "name": "Power Yoga", "time": "09:00", "duration": "1 hora", "instructor": "Lucia Sanz", "status": "green" },
-    { "name": "Meditación", "time": "20:00", "duration": "30 min", "instructor": "Zen Master", "status": "green" }
+    { "name": "Power Yoga", "bTime": "09:00", "eTime": "10:00", "instructor": "Lucia Sanz", "status":"green"},
+    { "name": "Meditación", "bTime": "20:00", "eTime": "21:00", "instructor": "Zen Master", "status": "green" }
   ]
 }
