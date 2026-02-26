@@ -328,7 +328,7 @@ p {                               /* Styles for paragraph elements */
   padding: 20px 15px;       /* Adds 40px of space at the top and bottom */
   text-align: center;       /* Centers the text inside the div */
   border-bottom: 1px solid rgba(61, 61, 61, 0.1); /* Adds a very light divider line */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.6s ease;
 }
 
 .schedule-row h3 {
@@ -367,7 +367,7 @@ p {                               /* Styles for paragraph elements */
   flex-shrink: 0;
 }
 
-/* Container to keep dot and button aligned */
+/* Container to keep dot and reserve-button aligned */
 .class-actions {
   display: flex;
   align-items: center;
