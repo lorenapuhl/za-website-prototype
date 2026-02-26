@@ -143,20 +143,23 @@ p {                               /* Styles for paragraph elements */
 }
 
 /* ========================================
-   TESTINONIALS
+   TESTIMONIALS
    ======================================== */
+   
+/* Entire testimonials container */
 .testimonials {
   text-align: center;
   padding: 4em 0; /* Vertical breathing room */
   overflow: hidden; /* Keeps the slider from causing page horizontal scroll */
 }
-
+/* Header 'Nuestra comunidad opina */
 .testimonials h2 {
   margin-bottom: 2em;
   color: var(--font-color);
 }
 
 /* --- THE SLIDER TRACK (The Horizontal Axis) --- */
+/* Sliding container with all testimonial cards */
 .testimonial-slider {
   display: flex;
   overflow-x: auto;          /* Enables the actual swipe/scroll */
@@ -177,7 +180,7 @@ p {                               /* Styles for paragraph elements */
   display: none;
 }
 
-/* --- THE INDIVIDUAL CARDS --- */
+/* Individual testimonial cards*/
 .testimonial-card {
   flex: 0 0 75%;             /* Card takes 85% of screen (shows "peek" of next) */
   scroll-snap-align: center; /* Ensures card snaps to middle of screen */
@@ -190,6 +193,7 @@ p {                               /* Styles for paragraph elements */
   justify-content: center;
 }
 
+/* Testimonial quotes */
 .testimonial-card p {
   line-height: 1.6;
   max-width: 45ch;           /* Typography "Golden Range" */
@@ -197,6 +201,7 @@ p {                               /* Styles for paragraph elements */
   font-style: italic;        /* Distinguishes the quote from other text */
 }
 
+/* Testimonial author */
 .testimonial-card span {
   display: block;
   font-weight: bold;
@@ -222,17 +227,21 @@ p {                               /* Styles for paragraph elements */
 /* ========================================
    BENEFITS (Slider Version)
    ======================================== */
+   
+/* Entire benefits section */   
 .benefits {
   text-align: center;
   padding: 2em 0;
   overflow: hidden; /* Prevents page-wide horizontal scrolling */
 }
 
+/* 'Ofrecemos' header*/
 .benefits h2 {
   margin-bottom: 0.5em;
   color: var(--font-color);
 }
 
+/* sliding container containing individual cards */
 .benefits-container {
   display: flex !important;
   flex-direction: row !important; /* Force horizontal even on mobile */
@@ -248,6 +257,7 @@ p {                               /* Styles for paragraph elements */
   display: none;                /* Hide scrollbar Chrome/Safari */
 }
 
+/* Individual benefits card */
 .benefit-item {
   flex: 0 0 75%;                /* Card takes up 75% of view */
   scroll-snap-align: center;    /* Magnet snap to center */
@@ -278,7 +288,7 @@ p {                               /* Styles for paragraph elements */
   margin: 0 auto;
 }
 
-/* Horarios header*/
+/* 'Horarios' header*/
 .schedule-section h2 {
   margin-bottom: 2em;
   color: var(--font-color);
@@ -294,6 +304,7 @@ p {                               /* Styles for paragraph elements */
   margin-bottom: 20px;
 }
 
+/* Tab for they day's name on top of the class schedules */
 .day-tab {
   cursor: pointer;
   padding-bottom: 8px;
@@ -302,6 +313,7 @@ p {                               /* Styles for paragraph elements */
   transition: all 0.3s ease;
 }
 
+/* Active day */
 .day-tab.active {
   opacity: 1;
   font-weight: bold;
@@ -319,10 +331,6 @@ p {                               /* Styles for paragraph elements */
 }
 
 .schedule-slider::-webkit-scrollbar { display: none; }
-
-/* ========================================
-   SCHEDULE COMPONENTS
-   ======================================== */
 
 /* Main container for one class entry (e.g., Yin Yoga) in schedule.js */
 .schedule-row {
@@ -357,7 +365,7 @@ p {                               /* Styles for paragraph elements */
 }
 
 
-/* Optional: Subtle hover effect for the whole row */
+/* Subtle hover effect for the whole row */
 .schedule-row:hover {
   background-color: rgba(255, 255, 255, 0.3); 
 }
@@ -367,6 +375,7 @@ p {                               /* Styles for paragraph elements */
   border-bottom: none;
 }
 
+/* Container for all class rows of a specific day in schedule.js*/
 .day-environment {
   min-width: 100%;
   scroll-snap-align: start;

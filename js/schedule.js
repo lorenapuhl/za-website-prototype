@@ -75,8 +75,7 @@ async function initSchedule() {
       data[day].forEach(item => {
         // Creates a container for a single class row
         const row = document.createElement('div');
-        
-        // If the JSON says 'passed: true', it adds the 'passed-event' CSS class to fade it out
+
         row.className = 'schedule-row';
         
         // Injects a complex block of HTML using data from the JSON (item.name, item.time, etc.)
