@@ -80,10 +80,12 @@ async function initSchedule() {
         
         // Injects a complex block of HTML using data from the JSON (item.name, item.time, etc.)
         row.innerHTML = `
+            <div class="class-info">
              <h3>${item.name}</h3> 
              <p>${item.bTime} - ${item.eTime}</p>
              <p>${item.instructor}</p>
-             <div class="class-actions">
+            </div>
+            <div class="class-actions">
                 <span class="status-dot ${item.status}"></span>
                 <button class="btn-reserve">Reservar</button>
              </div>
