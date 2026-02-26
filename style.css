@@ -272,22 +272,24 @@ p {                               /* Styles for paragraph elements */
 /* ========================================
    CLASS SCHEDULES
    ======================================== */
+/* Main schedule section in index.html*/
 .schedule-section {
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* Horarios header*/
 .schedule-section h2 {
   margin-bottom: 2em;
   color: var(--font-color);
   margin-top: 5em
 }
-
+/*Container for day "Tabs" (the buttons labeled DOM 22, LUN 23, MAR 24, etc.) in index.html*/
 .day-selector {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   border-bottom: 1px solid var(--header-color);
   margin-bottom: 20px;
 }
@@ -306,6 +308,7 @@ p {                               /* Styles for paragraph elements */
   border-bottom: 2px solid var(--header-color);
 }
 
+/*A long horizontal row of slides (days) that moves back and forth in index.html*/
 .schedule-slider {
   display: flex;
   overflow-x: auto;
@@ -321,7 +324,7 @@ p {                               /* Styles for paragraph elements */
    SCHEDULE COMPONENTS
    ======================================== */
 
-/* This is the main container for one class entry (e.g., Yin Yoga) */
+/* Main container for one class entry (e.g., Yin Yoga) in schedule.js */
 .schedule-row {
   display: flex;
   flex-direction: column;   /* Stacks the text and button vertically */
@@ -332,6 +335,7 @@ p {                               /* Styles for paragraph elements */
   transition: background-color 0.6s ease;
 }
 
+/* Class name*/
 .schedule-row h3 {
   font-size: 1.1rem;          /* Makes the class name (e.g., Yin Yoga) the focal point */
   margin: 0 0 10px 0;         /* Removes top margin, adds space below for the time */
@@ -339,6 +343,7 @@ p {                               /* Styles for paragraph elements */
   letter-spacing: 1.5px;
 }
 
+/* Time and instructor */
 .schedule-row p {
   font-size: 0.85rem;            /* Standard readable size for details */
   margin: 4px 0;              /* Tight spacing between the time line and instructor line */
@@ -395,6 +400,7 @@ p {                               /* Styles for paragraph elements */
 .status-dot.orange { background-color: #FF9800; }
 .status-dot.red { background-color: #F44336; }
 
+/* Reserve button */
 .btn-reserve {
   background-color: var(--header-color);
   color: #FFFFFF; 
