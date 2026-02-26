@@ -229,7 +229,7 @@ p {                               /* Styles for paragraph elements */
 }
 
 .benefits h2 {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   color: var(--font-color);
 }
 
@@ -251,7 +251,7 @@ p {                               /* Styles for paragraph elements */
 .benefit-item {
   flex: 0 0 75%;                /* Card takes up 75% of view */
   scroll-snap-align: center;    /* Magnet snap to center */
-  padding: 2.5em 1.5em;
+  padding: 2em 1.5em;
   border-radius: 0;             /* ZANNA sharp edges */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -280,6 +280,7 @@ p {                               /* Styles for paragraph elements */
 .schedule-section h2 {
   margin-bottom: 2em;
   color: var(--font-color);
+  margin-top: 5em
 }
 
 .day-selector {
