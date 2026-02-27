@@ -393,7 +393,7 @@ p {                               /* Styles for paragraph elements */
   align-items: center;
   justify-content: flex-end;
   gap: 0.8em; /* Space between the green dot and the button */
-  width: 10em; /* Fixed width ensures all buttons line up vertically */
+  width: 8em; /* Fixed width ensures all buttons line up vertically */
   flex-shrink: 0; /* Prevents the button area from being squeezed */
 }
 
