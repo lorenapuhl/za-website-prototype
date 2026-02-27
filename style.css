@@ -360,12 +360,6 @@ p {                               /* Styles for paragraph elements */
   margin: 0;
 }
 
-/* Optional: Target the instructor specifically if you want it even softer */
-.schedule-row p:last-of-type {
-  font-style: italic;
-  margin-bottom: 15px;        /* Adds a gap before the "Reservar" button */
-}
-
 
 /* Subtle hover effect for the whole row */
 .schedule-row:hover {
