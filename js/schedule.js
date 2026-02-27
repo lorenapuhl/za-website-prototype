@@ -77,8 +77,10 @@ async function initSchedule() {
         const row = document.createElement('div');
 
         row.className = 'schedule-row';
+        const isFull = item.status === 'red'; // Class status
         
         // Injects a complex block of HTML using data from the JSON (item.name, item.time, etc.)
+        // <tagname attribute="value" booleanAttribute> Content </tagname>
         row.innerHTML = `
             <div class="class-info">
              <h3>${item.name}</h3> 
@@ -87,8 +89,12 @@ async function initSchedule() {
             </div>
             <div class="class-actions">
                 <span class="status-dot ${item.status}"></span>
-                <button class="btn-reserve">Reservar</button>
-             </div>
+                <button
+                  class="btn-reserve ${isFull ? 'btn-disabled':''}" // If isFull is true, it adds the btn-disabled class. If false, it adds nothing ('')
+                  ${isFull ? 'disabled' : ''}> // Adds native HTML attribute 'disabled' is isFull condition trtue
+                  ${isFull ? 'Completo' : 'Reservar'} // Defines button name
+                </button>
+            </div>
         `;
         // Adds the finished row into the day container
         dayEnv.appendChild(row);
