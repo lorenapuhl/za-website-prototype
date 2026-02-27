@@ -80,6 +80,9 @@ async function initSchedule() {
         const isFull = item.status === 'red'; // Class status
         
         // Injects a complex block of HTML using data from the JSON (item.name, item.time, etc.)
+        // If isFull is true, it adds the btn-disabled class. If false, it adds nothing ('')
+        // Adds native HTML attribute 'disabled' is isFull condition true
+         // Defines button name 'Completo' is isFull true
         // <tagname attribute="value" booleanAttribute> Content </tagname>
         row.innerHTML = `
             <div class="class-info">
@@ -90,9 +93,9 @@ async function initSchedule() {
             <div class="class-actions">
                 <span class="status-dot ${item.status}"></span>
                 <button
-                  class="btn-reserve ${isFull ? 'btn-disabled':''}" // If isFull is true, it adds the btn-disabled class. If false, it adds nothing ('')
-                  ${isFull ? 'disabled' : ''}> // Adds native HTML attribute 'disabled' is isFull condition trtue
-                  ${isFull ? 'Completo' : 'Reservar'} // Defines button name
+                  class="btn-reserve ${isFull ? 'btn-disabled':''}"
+                  ${isFull ? 'disabled' : ''}>
+                  ${isFull ? 'Completo' : 'Reservar'}
                 </button>
             </div>
         `;
