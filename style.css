@@ -300,7 +300,7 @@ p {                               /* Styles for paragraph elements */
   justify-content: center;
   gap: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid var(--header-color);
+  /*border-bottom: 1px solid var(--header-color);*/
   margin-bottom: 20px;
 }
 
