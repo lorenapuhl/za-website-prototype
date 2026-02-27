@@ -373,7 +373,6 @@ p {                               /* Styles for paragraph elements */
 /* Container for all class rows of a specific day in schedule.js*/
 .day-environment {
   min-width: 100%;
-  scroll-snap-align: start;
   flex-shrink: 0;
 }
 
