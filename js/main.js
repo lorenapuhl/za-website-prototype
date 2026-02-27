@@ -2,17 +2,18 @@
  * HAMBURGER SLIDE-IN MENU FUNCTIONALITY
  ============================================================*/
 
-// Force the scroll to zero AFTER everything else has loaded
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 10); // A 10ms delay is usually enough to "win" the race
-});
-
 // Wait for the DOM (Document Object Model HTML <-> JavaScript connection) to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {  // Adds event listener that fires when HTML is fully loaded and parsed
   // The callback function will only run after all HTML elements are available in the DOM
   
+  centerSliders();
+
+  window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' // 'instant' prevents the smooth "tug-of-war" animation
+    });
+
   // Get elements with IDs 'menuButton' (Hanburger button), 'slideMenu' (slide-in menu), 'overlay' (dark overlay next to slide-in menu)
   const menuButton = document.getElementById('menuButton');
   const slideMenu = document.getElementById('slideMenu');
