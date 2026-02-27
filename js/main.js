@@ -88,11 +88,15 @@ window.addEventListener('load', () => {
       const middleIndex = Math.floor(cards.length / 2);
       const targetCard = cards[middleIndex];
 
-      targetCard.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
+      // (Card's position) - (Half of the slider's width) + (Half of the card's width)
+      const scrollPosition = 
+        targetCard.offsetLeft - 
+        (slider.offsetWidth / 2) + 
+        (targetCard.offsetWidth / 2);
+
+      // Scroll the CONTAINER horizontally only. 
+      // This will NEVER move the vertical scrollbar of the page.
+      slider.scrollLeft = scrollPosition;
       
       console.log(`Centered ${sliderSelector} at index ${middleIndex}`);
     }
