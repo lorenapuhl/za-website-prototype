@@ -385,6 +385,7 @@ p {                               /* Styles for paragraph elements */
   flex-shrink: 0;
   scroll-snap-align: start;   /* The "magnet" locks to the start of the element */
   scroll-snap-stop: always;    /* Prevents the user from accidentally skipping days */
+  overflow: hidden;  /* Prevents any internal "leakage" of width */
 }
 
 /* Container to keep dot and reserve-button aligned */
@@ -393,7 +394,7 @@ p {                               /* Styles for paragraph elements */
   align-items: center;
   justify-content: flex-end;
   gap: 0.8em; /* Space between the green dot and the button */
-  width: 11em; /* Fixed width ensures all buttons line up vertically */
+  width: 10em; /* Fixed width ensures all buttons line up vertically */
   flex-shrink: 0; /* Prevents the button area from being squeezed */
 }
 
