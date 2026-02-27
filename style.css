@@ -324,12 +324,10 @@ p {                               /* Styles for paragraph elements */
 .schedule-slider {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory; /* You already have this */
   -webkit-overflow-scrolling: touch; /* Makes the magnet feel smoother on iPhones */
   scrollbar-width: none; /* Hide scrollbar for Chrome/Safari below */
-  scroll-padding: 0 20px; /* If you want the 'magnet' to stop 20px away from the edge */
   margin-bottom: 80px; /* Pushes the next section further down */
 }
 
@@ -346,10 +344,12 @@ p {                               /* Styles for paragraph elements */
   transition: background-color 0.6s ease;
 }
 
+/* Class-info container with class name, schedule and teacher*/
 .class-info {
   flex: 1; 
   text-align: left;
   padding-right: 20px; /* Space between text and the dot/button area */
+  min-width: 0; /*Allows text to truncate or wrap instead of pushing the button */
 }
 
 /* Class-info container with class name, schedule and teacher*/
@@ -393,6 +393,8 @@ p {                               /* Styles for paragraph elements */
   align-items: center;
   justify-content: flex-end;
   gap: 10px; /* Space between the green dot and the button */
+  width: 160px; /* Fixed width ensures all buttons line up vertically */
+  flex-shrink: 0; /* Prevents the button area from being squeezed */
 }
 
 /* The Base Shape of the dot */
