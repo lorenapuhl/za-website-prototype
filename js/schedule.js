@@ -109,13 +109,13 @@ async function initSchedule() {
 
     // Sync tabs on manual scroll
     // Listens for when the user swipes or scrolls the slider manually (not via button)
-      setTimeout(() => {
-      slider.addEventListener('scroll', () => {
-        const index = Math.round(slider.scrollLeft / slider.offsetWidth);
-        updateActiveTab(index);
-      });
-      console.log("Scroll listener is now active.");
-    }, 0);
+    slider.addEventListener('scroll', () => {
+    // Calculates which "page" the user is on by dividing scroll position by element width
+    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+    // Updates the top tabs to match the current scroll position
+    updateActiveTab(index);
+
+    }); 
 
   } catch (error) {
     console.error("Error loading the schedule:", error);

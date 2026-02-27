@@ -286,6 +286,7 @@ p {                               /* Styles for paragraph elements */
 .schedule-section {
   max-width: 900px;
   margin: 0 auto;
+  overflow-anchor: none;
 }
 
 /* 'Horarios' header*/
