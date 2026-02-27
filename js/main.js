@@ -97,8 +97,6 @@ window.addEventListener('load', () => {
       // Scroll the CONTAINER horizontally only. 
       // This will NEVER move the vertical scrollbar of the page.
       slider.scrollLeft = scrollPosition;
-      
-      console.log(`Centered ${sliderSelector} at index ${middleIndex}`);
     }
   };
 
