@@ -173,7 +173,6 @@ p {                               /* Styles for paragraph elements */
   scroll-padding-inline: 15%;
   scrollbar-width: none;     /* Hides scrollbar on Firefox */
   -ms-overflow-style: none;  /* Hides scrollbar on Edge */
-  scroll-behavior: smooth;
 }
 
 /* Hides scrollbar on Chrome, Safari, and Opera */
@@ -252,7 +251,6 @@ p {                               /* Styles for paragraph elements */
   padding: 1.5em 15% 3em 15%;   /* 15% side padding for the "center" effect */
   scrollbar-width: none;        /* Hide scrollbar Firefox */
   -ms-overflow-style: none;     /* Hide scrollbar Edge */
-  scroll-behavior: smooth;
 }
 
 .benefits-container::-webkit-scrollbar {
