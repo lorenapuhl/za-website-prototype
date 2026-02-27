@@ -2,7 +2,12 @@
  * HAMBURGER SLIDE-IN MENU FUNCTIONALITY
  ============================================================*/
 
-window.scrollTo(0, 0);
+// Force the scroll to zero AFTER everything else has loaded
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10); // A 10ms delay is usually enough to "win" the race
+});
 
 // Wait for the DOM (Document Object Model HTML <-> JavaScript connection) to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {  // Adds event listener that fires when HTML is fully loaded and parsed
