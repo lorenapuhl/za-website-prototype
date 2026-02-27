@@ -110,11 +110,10 @@ async function initSchedule() {
     // Sync tabs on manual scroll
     // Listens for when the user swipes or scrolls the slider manually (not via button)
     slider.addEventListener('scroll', () => {
-    // Calculates which "page" the user is on by dividing scroll position by element width
-    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
-    // Updates the top tabs to match the current scroll position
-    updateActiveTab(index);
-
+      // Calculates which "page" the user is on by dividing scroll position by element width
+      const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+      // Updates the top tabs to match the current scroll position
+      updateActiveTab(index);
     }); 
 
   } catch (error) {
