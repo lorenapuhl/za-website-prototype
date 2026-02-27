@@ -25,6 +25,6 @@
   ],
   "Dom": [
     { "name": "Pilates Zen", "bTime": "09:30", "eTime": "10:30", "instructor": "Ricardo Paz", "status": "green" },
-    { "name": "Sesión de Recuperación", "bTime": "11:00", "eTime": "12:00", "instructor": "Sofi Luna", "status": "orange" }
+    { "name": "Recuperación", "bTime": "11:00", "eTime": "12:00", "instructor": "Sofi Luna", "status": "orange" }
   ]
 }
