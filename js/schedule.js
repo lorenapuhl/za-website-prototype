@@ -2,14 +2,6 @@
  * SCHEDULE SLIDER logic
  ============================================================*/
 
-// 1. Force the browser to NOT remember the scroll position on refresh
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
-// 2. Ensure the page starts at the very top (0 pixels down)
-window.scrollTo(0, 0);
-
 // 'async' allows the use of 'await' for handling asynchronous operations like fetching data
 async function initSchedule() {
   try {
