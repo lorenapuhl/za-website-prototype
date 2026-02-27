@@ -383,7 +383,6 @@ p {                               /* Styles for paragraph elements */
   align-items: center;
   justify-content: flex-end;
   gap: 10px; /* Space between the green dot and the button */
-  margin-top: 15px;
 }
 
 /* The Base Shape of the dot */
@@ -414,7 +413,6 @@ p {                               /* Styles for paragraph elements */
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
-  margin-top: 15px; /* Adds space above the button */
 }
 
 .btn-reserve:hover {
