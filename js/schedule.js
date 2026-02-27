@@ -93,7 +93,7 @@ async function initSchedule() {
             <div class="class-actions">
                 <span class="status-dot ${item.status}"></span>
                 <button
-                  class="btn-reserve ${isFull ? 'btn-disabled':''}"
+                  class="btn-reserve"
                   ${isFull ? 'disabled' : ''}>
                   ${isFull ? 'Completo' : 'Reservar'}
                 </button>
