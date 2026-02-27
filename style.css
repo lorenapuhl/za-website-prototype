@@ -382,7 +382,7 @@ p {                               /* Styles for paragraph elements */
 .class-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 10px; /* Space between the green dot and the button */
   margin-top: 15px;
 }
