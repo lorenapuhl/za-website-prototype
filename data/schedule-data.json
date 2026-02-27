@@ -1,10 +1,30 @@
 {
   "Lunes": [
-    { "name": "Yin Yoga", "bTime": "17:00", "eTime": "18:30", "instructor": "Andrea Galván", "status": "green" },
-    { "name": "Vinyasa Flow", "bTime": "18:30", "eTime": "20:00", "instructor": "Marco Polo", "status": "red" }
+    { "name": "Pilates Reformer I", "bTime": "07:00", "eTime": "08:00", "instructor": "Andrea Galván", "status": "green" },
+    { "name": "Mat Pilates Flow", "bTime": "18:30", "eTime": "19:30", "instructor": "Marco Polo", "status": "red" }
   ],
   "Martes": [
-    { "name": "Power Yoga", "bTime": "09:00", "eTime": "10:00", "instructor": "Lucia Sanz", "status":"green"},
-    { "name": "Meditación", "bTime": "20:00", "eTime": "21:00", "instructor": "Zen Master", "status": "orange" }
+    { "name": "Power Pilates", "bTime": "09:00", "eTime": "10:00", "instructor": "Lucia Sanz", "status": "green" },
+    { "name": "Pilates con Implementos", "bTime": "19:00", "eTime": "20:00", "instructor": "Clara Ruiz", "status": "orange" }
+  ],
+  "Miércoles": [
+    { "name": "Pilates Prenatal", "bTime": "10:30", "eTime": "11:30", "instructor": "Elena Sol", "status": "green" },
+    { "name": "Core & Stability", "bTime": "17:00", "eTime": "18:00", "instructor": "Ricardo Paz", "status": "red" }
+  ],
+  "Jueves": [
+    { "name": "Pilates Reformer II", "bTime": "08:00", "eTime": "09:00", "instructor": "Lucia Sanz", "status": "green" },
+    { "name": "Barre Pilates", "bTime": "20:00", "eTime": "21:00", "instructor": "Sofi Luna", "status": "green" }
+  ],
+  "Viernes": [
+    { "name": "Stretching & Flex", "bTime": "07:00", "eTime": "08:00", "instructor": "Andrea Galván", "status": "orange" },
+    { "name": "Pilates HIIT", "bTime": "18:00", "eTime": "19:00", "instructor": "Marco Polo", "status": "green" }
+  ],
+  "Sábado": [
+    { "name": "Pilates Mat Grupal", "bTime": "10:00", "eTime": "11:00", "instructor": "Clara Ruiz", "status": "red" },
+    { "name": "Workshop Postural", "bTime": "11:30", "eTime": "13:00", "instructor": "Elena Sol", "status": "green" }
+  ],
+  "Domingo": [
+    { "name": "Pilates Zen", "bTime": "09:30", "eTime": "10:30", "instructor": "Ricardo Paz", "status": "green" },
+    { "name": "Sesión de Recuperación", "bTime": "11:00", "eTime": "12:00", "instructor": "Sofi Luna", "status": "orange" }
   ]
 }
