@@ -415,6 +415,13 @@ p {                               /* Styles for paragraph elements */
   cursor: pointer;
 }
 
+/* This targets ONLY buttons that have the 'disabled' attribute */
+.btn-reserve:disabled {
+  background-color: var(--header-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .btn-reserve:hover {
   background-color: #1A1A1A; /* Darkens slightly */
   transform: translateY(-2px); /* Subtle lift effect */
