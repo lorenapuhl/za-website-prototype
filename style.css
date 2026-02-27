@@ -328,7 +328,10 @@ p {                               /* Styles for paragraph elements */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* You already have this */
+  -webkit-overflow-scrolling: touch; /* Makes the magnet feel smoother on iPhones */
   scrollbar-width: none; /* Hide scrollbar for Chrome/Safari below */
+  scroll-padding: 0 20px; /* If you want the 'magnet' to stop 20px away from the edge */
   margin-bottom: 80px; /* Pushes the next section further down */
 }
 
@@ -376,6 +379,8 @@ p {                               /* Styles for paragraph elements */
 .day-environment {
   min-width: 100%;
   flex-shrink: 0;
+  scroll-snap-align: start;   /* The "magnet" locks to the start of the element */
+  scroll-snap-stop: always;    /* Prevents the user from accidentally skipping days */
 }
 
 /* Container to keep dot and reserve-button aligned */
