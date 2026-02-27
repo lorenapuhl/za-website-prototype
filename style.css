@@ -338,7 +338,7 @@ p {                               /* Styles for paragraph elements */
   display: flex;
   flex-direction: row;   /* Stacks the text and button vertically */
   align-items: center;       /* Centers the text and button horizontally */
-  padding: 15px 5%; /* 15px top/bottom, 5% left/right */  text-align: center;       /* Centers the text inside the div */
+  padding: 15px 3%; /* 15px top/bottom, 5% left/right */  text-align: center;       /* Centers the text inside the div */
   border-bottom: 1px solid rgba(61, 61, 61, 0.1); /* Adds a very light divider line */
   justify-content: space-between; /* Pushes text to left and buttons to right */
   transition: background-color 0.6s ease;
@@ -354,7 +354,7 @@ p {                               /* Styles for paragraph elements */
 
 /* Class-info container with class name, schedule and teacher*/
 .class-info h3 {
-  font-size: 1.1rem;          /* Makes the class name (e.g., Yin Yoga) the focal point */
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   margin: 0 0 5px 0;         /* Removes top margin, adds space below for the time */
   font-weight: 500;
   letter-spacing: 1.5px;
@@ -362,8 +362,7 @@ p {                               /* Styles for paragraph elements */
 
 /* Time and instructor */
 .class-info p {
-  font-size: 0.85rem;            /* Standard readable size for details */
-  margin: 4px 0;              /* Tight spacing between the time line and instructor line */
+  font-size: clamp(0.75rem, 2vw, 0.85rem);  margin: 4px 0;              /* Tight spacing between the time line and instructor line */
   line-height: 1.4;
   margin: 0;
 }
@@ -421,11 +420,12 @@ p {                               /* Styles for paragraph elements */
   background-color: var(--header-color);
   color: #FFFFFF; 
   border: none;
-  padding: 12px 28px;
+  padding: 0.6em 1.2em;
   border-radius: 6px;
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
+  font-size: 0.85rem; /* Slightly smaller base font */
 }
 
 /* This targets ONLY buttons that have the 'disabled' attribute */
