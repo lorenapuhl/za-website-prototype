@@ -337,8 +337,7 @@ p {                               /* Styles for paragraph elements */
   display: flex;
   flex-direction: row;   /* Stacks the text and button vertically */
   align-items: center;       /* Centers the text and button horizontally */
-  padding: 15px;       /* Adds of space at the top and bottom */
-  text-align: center;       /* Centers the text inside the div */
+  padding: 15px 5%; /* 15px top/bottom, 5% left/right */  text-align: center;       /* Centers the text inside the div */
   border-bottom: 1px solid rgba(61, 61, 61, 0.1); /* Adds a very light divider line */
   justify-content: space-between; /* Pushes text to left and buttons to right */
   transition: background-color 0.6s ease;
