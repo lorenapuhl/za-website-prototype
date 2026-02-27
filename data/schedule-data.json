@@ -5,7 +5,7 @@
   ],
   "Mar": [
     { "name": "Power Pilates", "bTime": "09:00", "eTime": "10:00", "instructor": "Lucia Sanz", "status": "green" },
-    { "name": "Pilates con Implementos", "bTime": "19:00", "eTime": "20:00", "instructor": "Clara Ruiz", "status": "orange" }
+    { "name": "Pilates Intenso", "bTime": "19:00", "eTime": "20:00", "instructor": "Clara Ruiz", "status": "orange" }
   ],
   "Mié": [
     { "name": "Pilates Prenatal", "bTime": "10:30", "eTime": "11:30", "instructor": "Elena Sol", "status": "green" },
