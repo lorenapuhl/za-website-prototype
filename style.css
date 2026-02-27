@@ -338,10 +338,11 @@ p {                               /* Styles for paragraph elements */
   display: flex;
   flex-direction: row;   /* Stacks the text and button vertically */
   align-items: center;       /* Centers the text and button horizontally */
-  padding: 15px 3%; /* 15px top/bottom, 5% left/right */  text-align: center;       /* Centers the text inside the div */
+  padding: 1rem 1.5rem; /* 15px top/bottom, 5% left/right */  text-align: center;       /* Centers the text inside the div */
   border-bottom: 1px solid rgba(61, 61, 61, 0.1); /* Adds a very light divider line */
   justify-content: space-between; /* Pushes text to left and buttons to right */
   transition: background-color 0.6s ease;
+  box-sizing: border-box;
 }
 
 /* Class-info container with class name, schedule and teacher*/
@@ -350,6 +351,7 @@ p {                               /* Styles for paragraph elements */
   text-align: left;
   padding-right: 20px; /* Space between text and the dot/button area */
   min-width: 0; /*Allows text to truncate or wrap instead of pushing the button */
+  padding: 0;
 }
 
 /* Class-info container with class name, schedule and teacher*/
@@ -393,8 +395,11 @@ p {                               /* Styles for paragraph elements */
   align-items: center;
   justify-content: flex-end;
   gap: 0.8em; /* Space between the green dot and the button */
-  width: 8em; /* Fixed width ensures all buttons line up vertically */
+  /*width: 8em;  Fixed width ensures all buttons line up vertically */
   flex-shrink: 0; /* Prevents the button area from being squeezed */
+  min-width: 9rem;
+  margin-left:1rem;
+  width: auto;
 }
 
 /* The Base Shape of the dot */
