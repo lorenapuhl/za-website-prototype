@@ -85,7 +85,8 @@ body {
   color: var(--font-color);              /* Sets text to Dark Brown for readability */
   font-family: 'Montserrat', sans-serif; /* Uses Montserrat font, falls back to any sans-serif */
   text-align: center;             /* Centers all text in the body */
-  padding-bottom: 120px;
+  padding-bottom: 130px;
+  margin-top: 70px; /* Adjust the 50px to whatever height you need */
 }
 
 
