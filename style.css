@@ -710,8 +710,11 @@ p {                               /* Styles for paragraph elements */
   border-radius: 5px;             /* Rounds the corners by 5 pixels */
   flex-direction: column;         /* Stacks child elements (bars) vertically */
   gap: 5px;                       /* Adds 5px space between each bar */
-  /*order: 1px solid #333;          Adds a 1px solid dark gray border */
   display: none;                  /* Hidden by default (shown only on mobile) */
+  display: flex !important;  /* Makes hamburger button visible on mobile */
+  border: none; /* Removes the default border */
+  outline: none;       /* Removes the blue/black focus ring */
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .menu-button .bar {               /* Styles for the three bars inside hamburger button (DESCENDANT SELECTOR) */
@@ -823,20 +826,6 @@ p {                               /* Styles for paragraph elements */
     font-size: 14px;  /* Further reduces paragraph font size */
     margin: 10px;  /* Further reduces paragraph margin */
   }
-  
-  /* Hide desktop header on mobile */
-  header {
-    display: none !important;  /* Hides the desktop header on mobile devices */
-  }
-  
-  /* Show hamburger button */
-  .menu-button {
-    display: flex !important;  /* Makes hamburger button visible on mobile */
-    border: none; /* Removes the default border */
-    outline: none;       /* Removes the blue/black focus ring */
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
-  }
-}
 
 /* Small Mobile Styles (screens smaller than 400px) */
 @media screen and (max-width: 400px) {  /* Applies only on very small screens */
@@ -846,27 +835,5 @@ p {                               /* Styles for paragraph elements */
   
   nav ul {
     gap: 5px;  /* Minimum gap between nav items */
-  }
-}
-
-/* ==================================================
-   DESKTOP STYLES (screens larger than 600px)
-   ================================================== */
-@media screen and (min-width: 601px) {  /* Applies only on screens wider than 600px (desktop/tablet) */
-  /* Hide ALL mobile menu elements on desktop */
-  .menu-button,
-  .slide-menu,
-  .overlay {
-    display: none !important;  /* Forces mobile menu elements to be hidden on desktop */
-  }
-  
-  /* Ensure desktop header is visible */
-  header {
-    display: block !important;  /* Forces desktop header to be visible, setting element to block style */
-  }
-  
-  /* Make sure desktop navigation is visible */
-  nav ul {
-    display: flex !important;  /* Forces navigation to display as flex on desktop (single horizontal row)*/
   }
 }
