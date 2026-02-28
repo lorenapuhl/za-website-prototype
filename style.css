@@ -370,7 +370,8 @@ p {                               /* Styles for paragraph elements */
   transform: translateY(0); /* "Pressed" look when clicking */
 }
 
-@media (min-width: 769px) {
+/* Targets screens wider than 900px */
+@media (min-width: 900px) {
   .schedule-row {
     justify-content: center; /* Brings both elements toward the middle */
     gap: 4rem;              /* Creates a consistent, elegant space between them */
@@ -382,6 +383,18 @@ p {                               /* Styles for paragraph elements */
   }
 }
 
+/* Targets screens wider than 400px AND narrower than 900px */
+@media screen and (min-width: 400px) and (max-width: 899px) {
+  .schedule-row {
+    /* Increase the side padding to push content toward the center */
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    /* Ensure the row still takes up the full available width 
+       within those boundaries */
+    max-width: 100%; 
+  }
+}
 
 /* ========================================
    TESTIMONIALS
