@@ -370,6 +370,18 @@ p {                               /* Styles for paragraph elements */
   transform: translateY(0); /* "Pressed" look when clicking */
 }
 
+@media (min-width: 769px) {
+  .schedule-row {
+    justify-content: center; /* Brings both elements toward the middle */
+    gap: 4rem;              /* Creates a consistent, elegant space between them */
+  }
+  
+  .class-info {
+    flex: 0 1 auto;         /* Prevents the text from taking up all empty space */
+    text-align: right;      /* Optional: aligns text toward the button for a premium look */
+  }
+}
+
 
 /* ========================================
    TESTIMONIALS
