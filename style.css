@@ -143,88 +143,6 @@ p {                               /* Styles for paragraph elements */
 }
 
 /* ========================================
-   TESTIMONIALS
-   ======================================== */
-   
-/* Entire testimonials container */
-.testimonials {
-  text-align: center;
-  padding: 4em 0; /* Vertical breathing room */
-  overflow: hidden; /* Keeps the slider from causing page horizontal scroll */
-}
-/* Header 'Nuestra comunidad opina */
-.testimonials h2 {
-  margin-bottom: 2em;
-  color: var(--font-color);
-}
-
-/* --- THE SLIDER TRACK (The Horizontal Axis) --- */
-/* Sliding container with all testimonial cards */
-.testimonial-slider {
-  display: flex;
-  overflow-x: auto;          /* Enables the actual swipe/scroll */
-  scroll-snap-type: x mandatory; /* The "Magnet" effect to snap boxes in place */
-  gap: 1.5em;                /* Space between cards based on text size */
-
-  padding: 2em 15%;   /*Horizontal padding allows the first/last cards 
-     to sit in the center of the screen */
-  
-  /* Matches the padding so the snap point is also centered */
-  scroll-padding-inline: 15%;
-  scrollbar-width: none;     /* Hides scrollbar on Firefox */
-  -ms-overflow-style: none;  /* Hides scrollbar on Edge */
-}
-
-/* Hides scrollbar on Chrome, Safari, and Opera */
-.testimonial-slider::-webkit-scrollbar {
-  display: none;
-}
-
-/* Individual testimonial cards*/
-.testimonial-card {
-  flex: 0 0 75%;             /* Card takes 85% of screen (shows "peek" of next) */
-  scroll-snap-align: center; /* Ensures card snaps to middle of screen */
-  padding: 2.5em 1.5em;      /* Relative padding that grows with text */
-  border-radius: 0;          /* Sharp corners for the boutique look */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Testimonial quotes */
-.testimonial-card p {
-  line-height: 1.6;
-  max-width: 45ch;           /* Typography "Golden Range" */
-  margin: 0 auto 1em auto;
-  font-style: italic;        /* Distinguishes the quote from other text */
-}
-
-/* Testimonial author */
-.testimonial-card span {
-  display: block;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.85em;
-  color: var(--font-color);
-}
-
-/* --- COMPUTER SCREENS (Min-width: 769px) --- */
-@media (min-width: 769px) {
-  .testimonial-slider {
-    justify-content: center; /* Centers cards if there are only a few */
-    padding: 2em 10%;       /* Larger side padding on desktop */
-  }
-
-  .testimonial-card {
-    flex: 0 0 450px;         /* Fixed elegant width on large screens */
-    padding: 3.5em 2.5em;    /* More luxurious spacing on desktop */
-  }
-}
-
-/* ========================================
    BENEFITS (Slider Version)
    ======================================== */
    
@@ -448,6 +366,89 @@ p {                               /* Styles for paragraph elements */
 
 .btn-reserve:active {
   transform: translateY(0); /* "Pressed" look when clicking */
+}
+
+
+/* ========================================
+   TESTIMONIALS
+   ======================================== */
+   
+/* Entire testimonials container */
+.testimonials {
+  text-align: center;
+  padding: 4em 0; /* Vertical breathing room */
+  overflow: hidden; /* Keeps the slider from causing page horizontal scroll */
+}
+/* Header 'Nuestra comunidad opina */
+.testimonials h2 {
+  margin-bottom: 2em;
+  color: var(--font-color);
+}
+
+/* --- THE SLIDER TRACK (The Horizontal Axis) --- */
+/* Sliding container with all testimonial cards */
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;          /* Enables the actual swipe/scroll */
+  scroll-snap-type: x mandatory; /* The "Magnet" effect to snap boxes in place */
+  gap: 1.5em;                /* Space between cards based on text size */
+
+  padding: 2em 15%;   /*Horizontal padding allows the first/last cards 
+     to sit in the center of the screen */
+  
+  /* Matches the padding so the snap point is also centered */
+  scroll-padding-inline: 15%;
+  scrollbar-width: none;     /* Hides scrollbar on Firefox */
+  -ms-overflow-style: none;  /* Hides scrollbar on Edge */
+}
+
+/* Hides scrollbar on Chrome, Safari, and Opera */
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual testimonial cards*/
+.testimonial-card {
+  flex: 0 0 75%;             /* Card takes 85% of screen (shows "peek" of next) */
+  scroll-snap-align: center; /* Ensures card snaps to middle of screen */
+  padding: 2.5em 1.5em;      /* Relative padding that grows with text */
+  border-radius: 0;          /* Sharp corners for the boutique look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Testimonial quotes */
+.testimonial-card p {
+  line-height: 1.6;
+  max-width: 45ch;           /* Typography "Golden Range" */
+  margin: 0 auto 1em auto;
+  font-style: italic;        /* Distinguishes the quote from other text */
+}
+
+/* Testimonial author */
+.testimonial-card span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+  color: var(--font-color);
+}
+
+/* --- COMPUTER SCREENS (Min-width: 769px) --- */
+@media (min-width: 769px) {
+  .testimonial-slider {
+    justify-content: center; /* Centers cards if there are only a few */
+    padding: 2em 10%;       /* Larger side padding on desktop */
+  }
+
+  .testimonial-card {
+    flex: 0 0 450px;         /* Fixed elegant width on large screens */
+    padding: 3.5em 2.5em;    /* More luxurious spacing on desktop */
+  }
 }
 
 /* ========================================
