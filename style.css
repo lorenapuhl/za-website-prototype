@@ -373,7 +373,6 @@ p {                               /* Styles for paragraph elements */
 /* Targets screens wider than 900px */
 @media (min-width: 900px) {
   .schedule-row {
-    justify-content: center; /* Brings both elements toward the middle */
     gap: 4rem;              /* Creates a consistent, elegant space between them */
   }
   
