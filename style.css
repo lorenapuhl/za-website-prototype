@@ -264,7 +264,6 @@ p {                               /* Styles for paragraph elements */
   max-width: 700px;
   margin: 0 auto; /* Centers the restricted row within the section */
 }
-}
 
 /* Class-info container with class name, schedule and teacher*/
 .class-info {
@@ -314,11 +313,11 @@ p {                               /* Styles for paragraph elements */
 .class-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.8em; /* Space between the green dot and the button */
   /*width: 8em;  Fixed width ensures all buttons line up vertically */
   flex-shrink: 0; /* Prevents the button area from being squeezed */
-  min-width: 9rem;
+  min-width: auto;
   margin-left:1rem;
   width: auto;
 }
