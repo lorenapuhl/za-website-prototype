@@ -261,6 +261,9 @@ p {                               /* Styles for paragraph elements */
   justify-content: space-between; /* Pushes text to left and buttons to right */
   transition: background-color 0.6s ease;
   box-sizing: border-box;
+  max-width: 700px;
+  margin: 0 auto; /* Centers the restricted row within the section */
+}
 }
 
 /* Class-info container with class name, schedule and teacher*/
