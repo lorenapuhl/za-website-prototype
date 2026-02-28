@@ -497,14 +497,13 @@ p {                               /* Styles for paragraph elements */
 }
 
 .pricing-card h3 {
-  color: var(--font-color)
-  margin-bottom: 0.5em;
-  font-size: 1.2 em
+  color: var(--font-color);
+  font-size: 1.2 em;
 }
 
 .pricing-card p {
-  color: var(--font-color)
-  font-size: 1.2 em
+  color: var(--font-color);
+  font-size: 1.2 em;
   margin-bottom: 0.5em;
 }
 
