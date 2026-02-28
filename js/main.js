@@ -71,7 +71,6 @@ window.addEventListener('scroll', function() {
  ============================================================*/
 
 window.addEventListener('load', () => {
-  // Function to center a slider's middle child
   const centerSlider = (sliderSelector, cardSelector) => {
     const slider = document.querySelector(sliderSelector);
     const cards = document.querySelectorAll(cardSelector);
@@ -80,19 +79,17 @@ window.addEventListener('load', () => {
       const middleIndex = Math.floor(cards.length / 2);
       const targetCard = cards[middleIndex];
 
-      // (Card's position) - (Half of the slider's width) + (Half of the card's width)
       const scrollPosition = 
         targetCard.offsetLeft - 
         (slider.offsetWidth / 2) + 
         (targetCard.offsetWidth / 2);
 
-      // Scroll the CONTAINER horizontally only. 
-      // This will NEVER move the vertical scrollbar of the page.
       slider.scrollLeft = scrollPosition;
     }
   };
 
-  // Run the centering function for both sections
+  // Centering all your sliders
   centerSlider('.testimonial-slider', '.testimonial-card');
   centerSlider('.benefits-container', '.benefit-item');
+  centerSlider('.pricing-slider', '.pricing-card'); // Added for pricing
 });
