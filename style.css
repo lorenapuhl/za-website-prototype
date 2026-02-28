@@ -530,6 +530,7 @@ p {                               /* Styles for paragraph elements */
   margin-top: 2em;  /*adds space above*/
   align-self: center; /* keeps button centered */
   min-width: 160px  /*ensures button does't get too small on small screens */
+  letter-spacing: 1px;
 }
 
 .cta-btn:active{
