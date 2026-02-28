@@ -67,7 +67,7 @@ window.addEventListener('scroll', function() {
 });
 
 /**==========================================================
- * CENTER TESTIMONIAL SLIDER
+ * CENTER TESTIMONIAL, BENEFITS AND PRICING SLIDER
  ============================================================*/
 
 window.addEventListener('load', () => {
