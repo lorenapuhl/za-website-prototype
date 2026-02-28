@@ -172,6 +172,12 @@ p {                               /* Styles for paragraph elements */
   -ms-overflow-style: none;     /* Hide scrollbar Edge */
 }
 
+benefits-container:hover {
+  opacity: 0.8;
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .benefits-container::-webkit-scrollbar {
   display: none;                /* Hide scrollbar Chrome/Safari */
 }
@@ -541,6 +547,12 @@ p {                               /* Styles for paragraph elements */
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.pricing-card:hover {
+  background-color: #1A1A1A; /* Darkens slightly */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card h3 {
