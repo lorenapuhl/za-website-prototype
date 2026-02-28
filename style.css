@@ -383,16 +383,24 @@ p {                               /* Styles for paragraph elements */
   }
 }
 
-/* Targets screens wider than 400px AND narrower than 900px */
+/* Targets screens between 400px and 899px */
 @media screen and (min-width: 400px) and (max-width: 899px) {
   .schedule-row {
-    /* Increase the side padding to push content toward the center */
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    /* Ensure the row still takes up the full available width 
-       within those boundaries */
-    max-width: 100%; 
+    /* 1. Reset padding to match your standard look */
+    padding: 1rem 1.5rem; 
+    /* 2. Set a comfortable width that keeps content centered */
+    /* Instead of 100%, we use 90% to create a natural side gutter */
+    width: 90%; 
+    max-width: 600px; 
+    /* 3. Ensure the horizontal centering is active */
+    margin: 0 auto;
+    /* 4. Ensure space stays balanced between text and button */
+    justify-content: space-between;
+  }
+
+  .class-info {
+    /* Ensure text stays left-aligned within its half of the centered row */
+    text-align: left;
   }
 }
 
