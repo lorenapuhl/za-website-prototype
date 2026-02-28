@@ -375,7 +375,13 @@ p {                               /* Styles for paragraph elements */
   .schedule-row {
     gap: 4rem;              /* Creates a consistent, elegant space between them */
   }
-  
+
+  .day-environment {
+  border-radius: 0;          /* Sharp corners for the boutique look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+}
   .class-info {
     flex: 0 1 auto;         /* Prevents the text from taking up all empty space */
     text-align: right;      /* Optional: aligns text toward the button for a premium look */
