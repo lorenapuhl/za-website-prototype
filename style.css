@@ -359,7 +359,7 @@ p {                               /* Styles for paragraph elements */
 }
 
 .btn-reserve:hover {
-  background-color: #1A1A1A; /* Darkens slightly */
+  opacity: 0.8;
   transform: translateY(-2px); /* Subtle lift effect */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -457,25 +457,23 @@ p {                               /* Styles for paragraph elements */
 
 .pricing {
   text-align: center;
-  padding: 4em 0;
+  padding: 2em 0;
   overflow: hidden;
 }
 
 .pricing h2 {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   color: var(--font-color);
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 /* --- THE SLIDER TRACK --- */
 .pricing-slider {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 1.5em;
-  padding: 2em 15%;
-  scroll-padding-inline: 15%;
+  padding: 1.5em 15% 3em 15%;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -488,64 +486,68 @@ p {                               /* Styles for paragraph elements */
 .pricing-card {
   flex: 0 0 75%;
   scroll-snap-align: center;
-  padding: 3em 2em;
+  padding: 2em 1.5em;
   border-radius: 0; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: #fff;
+  justify-content: center;
 }
 
 .pricing-card h3 {
+  color: var(--font-color)
   margin-bottom: 0.5em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1.2 em
 }
 
 .pricing-card p {
-  line-height: 1.6;
-  margin-bottom: 1.5em;
-  color: #666;
+  color: var(--font-color)
+  font-size: 1.2 em
+  margin-bottom: 0.5em;
 }
 
 /* Price Styling */
 .pricing-card .price {
-  display: block;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 1em;
   color: var(--font-color);
 }
 
-/* Optional Button Styling */
+/* Button Styling */
 .cta-btn {
-  background: #000;
+  background: var(--header-color);
   color: #fff;
   border: none;
-  padding: 1em;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  letter-spacing: 1px;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.85em;
+  font-weight: 500;
   cursor: pointer;
   transition: opacity 0.3s;
 }
 
+.cta-btn:active{
+  transform: translateY(0); /* "Pressed" look when clicking */
+}
+
 .cta-btn:hover {
   opacity: 0.8;
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* --- COMPUTER SCREENS --- */
 @media (min-width: 769px) {
   .pricing-slider {
     justify-content: center;
-    padding: 2em 5%;
+    padding-inline: 20%;
   }
 
   .pricing-card {
-    flex: 0 0 280px; /* Slimmer cards for desktop to fit more side-by-side */
-    padding: 3em 2em;
+    flex: 0 0 350px; /* Slimmer cards for desktop to fit more side-by-side */
   }
 }
 
