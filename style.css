@@ -520,13 +520,16 @@ p {                               /* Styles for paragraph elements */
   background: var(--header-color);
   color: #fff;
   border: none;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 2.5em;
   border-radius: 6px;
   font-family: inherit;
   font-size: 0.85em;
   font-weight: 500;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin-top: 2em;  /*adds space above*/
+  align-self: center; /* keeps button centered */
+  min-width: 160px  /*ensures button does't get too small on small screens */
 }
 
 .cta-btn:active{
