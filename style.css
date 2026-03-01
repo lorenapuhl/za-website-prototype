@@ -296,10 +296,10 @@ p {                               /* Styles for paragraph elements */
 }
 
 
-/* Subtle hover effect for the whole row */
+/* Subtle hover effect for the whole row 
 .schedule-row:hover {
   background-color: rgba(255, 255, 255, 0.3); 
-}
+} */
 
 /* Remove the line from the last class so it doesn't look cut off */
 .schedule-row:last-child {
