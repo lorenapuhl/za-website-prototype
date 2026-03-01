@@ -32,4 +32,4 @@ website-prototype/
 
 ## Live Demo
 
-Visit the live site: [https://lorenapuhl.github.io/za-website-prototype/](https://lorenapuhl.github.io/zanna-website-prototype/)
+Visit the live site: [https://lorenapuhl.github.io/za-website-prototype/](https://lorenapuhl.github.io/zan-website-prototype/)
