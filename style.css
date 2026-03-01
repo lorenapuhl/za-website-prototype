@@ -844,6 +844,8 @@ p {                               /* Styles for paragraph elements */
     margin: 10px;  /* Further reduces paragraph margin */
   }
 
+}
+
 /* Small Mobile Styles (screens smaller than 400px) */
 @media screen and (max-width: 400px) {  /* Applies only on very small screens */
   h1 {
